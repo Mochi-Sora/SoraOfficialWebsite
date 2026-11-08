@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sora-agent"
+version = "0.1.0"
+description = "A model-agnostic agent harness with human-approval and quality gates."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Tam Kuan Hou (譚君浩 / Marco Tam)" }]
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Mochi-Sora/SoraAgent"
+Repository = "https://github.com/Mochi-Sora/SoraAgent"
+Issues = "https://github.com/Mochi-Sora/SoraAgent/issues"
+
+[project.optional-dependencies]
+openai = ["openai>=1.0"]
+memory = ["zstandard>=0.22; python_version < '3.14'"]
+cli = ["typer>=0.12", "rich>=13", "questionary>=2"]
+files = ["pypdf>=4"]
+dev = [
+  "pytest>=7",
+  "zstandard>=0.22; python_version < '3.14'",
+  "typer>=0.12",
+  "rich>=13",
+  "questionary>=2",
+  "pypdf>=4",
+]
+
+[project.scripts]
+sora = "sora_agent.cli:main"
+sora-memory = "sora_agent.memory.cli:main"
+sora-gateway = "sora_agent.channels.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sora_agent*"]
