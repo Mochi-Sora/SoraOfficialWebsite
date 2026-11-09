@@ -55,6 +55,10 @@ SoraOfficialWebsite/
 │   ├── SoraAgent-pyproject.toml
 │   ├── SoraAgent-install.sh
 │   ├── SoraAgent-install.ps1
+│   ├── SoraDesk-README.md
+│   ├── SoraDesk-LICENSE.txt
+│   ├── SoraDesk-protocol.md
+│   ├── SoraDesk-connections.md
 │   └── SoraPlatform-Roadmap.md
 └── README.md
 ```
@@ -68,8 +72,13 @@ SoraOfficialWebsite/
   [README](https://github.com/Mochi-Sora/SoraAgent/blob/main/README.md),
   [LICENSE](https://github.com/Mochi-Sora/SoraAgent/blob/main/LICENSE), and
   [pyproject.toml](https://github.com/Mochi-Sora/SoraAgent/blob/main/pyproject.toml).
+- **SoraDesk** — the official
+  [README](https://github.com/Mochi-Sora/SoraDesk/blob/main/README.md),
+  [protocol](https://github.com/Mochi-Sora/SoraDesk/blob/main/docs/protocol.md),
+  [connection modes](https://github.com/Mochi-Sora/SoraDesk/blob/main/docs/connections.md),
+  and [LICENSE](https://github.com/Mochi-Sora/SoraDesk/blob/main/LICENSE).
 - **SoraPlatform roadmap** — the official SoraPlatform roadmap document,
-  covering all ten products.
+  covering all ten products and their current status.
 - **SoraSkills** — the [Agensi creator page](https://www.agensi.io/creators/mochi-sora).
 - **Community** — the [SoraPlatform Discord server](https://discord.gg/s8W6JfBSMH).
 
@@ -78,10 +87,18 @@ the GitHub repositories are canonical.
 
 ## Scope
 
-The site covers the ten SoraPlatform products — SoraAgent, SoraDesk,
-SoraSkills, SoraPlugins, SoraOS, SoraOffice, SoraCreate, SoraBrowser,
-SoraMusic, and SoraSocials. MasonAgent appears once in the profile milestones
-as the predecessor to SoraAgent; there are no separate archive cards.
+The single page is organised into seven sections: the hero profile card, the
+purpose of SoraPlatform, the ten-product roadmap, SoraAgent, the newly built
+SoraDesk, the products still in development, and contact information. The site
+covers all ten SoraPlatform products — SoraAgent, SoraDesk, SoraSkills,
+SoraPlugins, SoraOS, SoraOffice, SoraCreate, SoraBrowser, SoraMusic, and
+SoraSocials. MasonAgent appears only as historical context in the profile copy;
+there are no separate archive cards.
+
+SoraAgent and SoraSkills are marked live. SoraDesk v0.1.0 is marked built: the
+Tauri v2 client, the local Python bridge, and signed-updater packaging are
+implemented against the frozen v1 protocol, with the first signed release still
+being prepared. The remaining seven products are marked in development.
 
 The unrelated `undertale-game-for-no-reason-at-all` repository is intentionally
 excluded.
@@ -93,16 +110,20 @@ excluded.
 - The install tabs, copy buttons, mobile navigation, and scroll-reveal effects
   are implemented in `assets/js/main.js`.
 - The page is intentionally consolidated: the hero introduces the person and links
-  to his main profiles, the profile adds biography and milestones, the roadmap
-  is the single product list, SoraAgent gets the technical detail, and the
-  documents section is the reference. External links live in the header, the
-  hero card, and the footer instead of a separate contact section.
+  to his main profiles; the purpose section states the mission; the roadmap is the
+  single product list; SoraAgent and SoraDesk get the technical detail; the
+  in-development section covers the remaining products; and contact links close
+  the page. External links also live in the header, the hero card, and the footer.
 - The hero card is a compact profile card: avatar, name, and direct GitHub,
   Agensi, and Discord links.
+- The SoraDesk section includes an HTML/CSS preview of the app shell rather than a
+  screenshot, so it stays sharp at any size and needs no image asset.
+- Local document mirrors are linked from the relevant product sections. The
+  GitHub versions are canonical.
 - Fonts are self-hosted under `assets/fonts/`; Sora, Inter, and Instrument Serif
   are licensed under the SIL Open Font License.
 - The social preview image is at `assets/img/og-cover.png` (1200 × 630). After
   deploying, replace the relative `og:image` and `twitter:image` paths in
   `index.html` with absolute URLs for the most reliable link previews.
-- SoraAgent is licensed **AGPL-3.0-only**. Website copy and branding are
-  © 2026 Tam Kuan Hou (譚君浩 / Marco Tam).
+- SoraAgent and SoraDesk are licensed **AGPL-3.0-only**. Website copy and
+  branding are © 2026 Tam Kuan Hou (譚君浩 / Marco Tam).
