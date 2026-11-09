@@ -95,10 +95,11 @@ SoraPlugins, SoraOS, SoraOffice, SoraCreate, SoraBrowser, SoraMusic, and
 SoraSocials. MasonAgent appears only as historical context in the profile copy;
 there are no separate archive cards.
 
-SoraAgent and SoraSkills are marked live. SoraDesk v0.1.0 is marked built: the
-Tauri v2 client, the local Python bridge, and signed-updater packaging are
-implemented against the frozen v1 protocol, with the first signed release still
-being prepared. The remaining seven products are marked in development.
+SoraAgent, SoraDesk, and SoraSkills are marked live. SoraDesk v0.1.0 is published:
+the Tauri v2 client, the local Python bridge, and signed updater packaging are
+implemented against the frozen v1 protocol. The macOS and Windows installers are
+unsigned for now; the updater artifacts are signed. The remaining seven products are
+marked in development.
 
 The unrelated `undertale-game-for-no-reason-at-all` repository is intentionally
 excluded.

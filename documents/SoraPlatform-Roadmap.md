@@ -6,12 +6,12 @@ So that's why SoraPlatform is created -> To stand opposed to the telemetry and b
 
 **Status legend**
 - **Live** — available now.
-- **Built** — implemented in the repository; the first signed release is being prepared.
+- **Built** — implemented in the repository; not yet released.
 - **WIP** — in development.
 
 **What SoraPlatform will bring**
   1. SoraAgent as the main engine of the entire project -> https://github.com/Mochi-Sora/SoraAgent — **Live** (v0.1.0)
-  2. SoraDesk (Tauri v2) as the main direct connection channel to SoraAgent -> https://github.com/Mochi-Sora/SoraDesk — **Built** (v0.1.0; first signed release pending)
+  2. SoraDesk (Tauri v2) as the main direct connection channel to SoraAgent -> https://github.com/Mochi-Sora/SoraDesk — **Live** (v0.1.0)
   3. SoraSkills as the broad term for framework-agnostic skills -> https://www.agensi.io/creators/mochi-sora — **Live**
   4. SoraPlugins as the broad term for SoraAgent dedicated plugins -> WIP
   5. SoraOS as a Linux distro developed on top of the Arch Linux base -> WIP
@@ -23,4 +23,4 @@ So that's why SoraPlatform is created -> To stand opposed to the telemetry and b
 
 **Current milestone**
 
-SoraDesk v0.1.0 is built: the Tauri v2 client, the local `sora_desktop` bridge, and signed-updater packaging are implemented against the frozen v1 protocol. Chat, sessions, calendar, memories, and settings work over local, SSH, or direct-IP connections. The first public release is being prepared.
+SoraDesk v0.1.0 is live: the Tauri v2 client, the local `sora_desktop` bridge, and signed-updater packaging are implemented against the frozen v1 protocol. Chat, sessions, calendar, memories, and settings work over local, SSH, or direct-IP connections. The first public release is available on GitHub Releases. The updater artifacts are signed; the macOS and Windows installers are not yet code-signed.

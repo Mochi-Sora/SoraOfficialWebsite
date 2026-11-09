@@ -278,12 +278,11 @@
         <div class="roadmap-panel">
           <div class="roadmap-meta reveal">
             <h3>The roadmap</h3>
-            <div class="roadmap-progress" role="progressbar" aria-label="3 of 10 products live or built" aria-valuemin="0" aria-valuemax="10" aria-valuenow="3">
+            <div class="roadmap-progress" role="progressbar" aria-label="3 of 10 products live" aria-valuemin="0" aria-valuemax="10" aria-valuenow="3">
               <span></span>
             </div>
             <div class="roadmap-legend">
-              <span><i class="status-dot live" aria-hidden="true"></i> 2 live</span>
-              <span><i class="status-dot built" aria-hidden="true"></i> 1 built</span>
+              <span><i class="status-dot live" aria-hidden="true"></i> 3 live</span>
               <span><i class="status-dot wip" aria-hidden="true"></i> 7 in development</span>
             </div>
           </div>
@@ -300,7 +299,7 @@
             <li class="product reveal">
               <span class="product-icon"><svg class="icon" aria-hidden="true"><use href="#i-desktop"></use></svg></span>
               <div class="product-body">
-                <div class="product-head"><span class="product-num">02</span><h3>SoraDesk</h3><span class="status-dot built" role="img" aria-label="Built, first release pending" title="Built, first release pending"></span></div>
+                <div class="product-head"><span class="product-num">02</span><h3>SoraDesk</h3><span class="status-dot live" role="img" aria-label="Live" title="Live"></span></div>
                 <p>The Tauri v2 desktop client — chat, sessions, calendar, memories, and settings.</p>
               </div>
               <a class="product-link" href="#soradesk" aria-label="SoraDesk details"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"></use></svg></a>
@@ -469,9 +468,10 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
             <p class="section-label light reveal"><span>04</span> SoraDesk</p>
             <h2 class="section-title light reveal" id="desk-title"><span class="title-line">SoraAgent,</span> <em>on your desktop.</em></h2>
             <p class="section-lede light reveal">A native Tauri v2 client for the SoraAgent runtime — chat, sessions, calendar, memories, and settings over local, SSH, or direct-IP connections.</p>
-            <p class="desk-status-line reveal"><span class="status-dot built" role="img" aria-label="Built, first release pending"></span> Built · v0.1.0 · first signed release pending</p>
+            <p class="desk-status-line reveal"><span class="status-dot live" role="img" aria-label="Live"></span> Live · v0.1.0 · signed updates, unsigned installers</p>
             <div class="desk-actions reveal">
-              <a class="btn btn-light btn-small" href="https://github.com/Mochi-Sora/SoraDesk" target="_blank" rel="noopener noreferrer">View repository <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
+              <a class="btn btn-light btn-small" href="https://github.com/Mochi-Sora/SoraDesk/releases/latest" target="_blank" rel="noopener noreferrer">Download v0.1.0 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
+              <a class="text-link light" href="https://github.com/Mochi-Sora/SoraDesk" target="_blank" rel="noopener noreferrer">View repository <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
               <a class="text-link light" href="documents/SoraDesk-README.md">Read the README <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
               <a class="text-link light" href="documents/SoraDesk-protocol.md">Protocol v1 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
             </div>
@@ -547,7 +547,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
           </div>
           <div class="flagship-fact">
             <h3>Status</h3>
-            <p>v0.1.0, built against the frozen v1 protocol. Tagged builds produce signed updater artifacts; the first public release is being prepared.</p>
+            <p>v0.1.0, released against the frozen v1 protocol. Updater artifacts are signed; the macOS and Windows installers are not yet code-signed, so first launch may show a Gatekeeper or SmartScreen warning.</p>
           </div>
         </div>
       </div>
