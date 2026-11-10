@@ -2714,6 +2714,207 @@ body.nav-open {
 }
 
 /* --------------------------------------------------------------------------
+   SoraSkills
+   -------------------------------------------------------------------------- */
+
+.skills {
+  background: var(--paper);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(36px, 6vw, 72px);
+  align-items: center;
+}
+
+.skills-copy code {
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: rgba(26, 23, 19, 0.06);
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+}
+
+.skills-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 7px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.64rem;
+  font-weight: 600;
+}
+
+.skills-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+  margin-top: 26px;
+}
+
+.skills-points {
+  display: grid;
+  gap: 12px;
+  margin: 30px 0 0;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.skills-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.skills-points .icon {
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  color: var(--green);
+}
+
+.skills-points strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.skills-cards {
+  display: grid;
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 250, 241, 0.72);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.skill-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: rgba(239, 106, 76, 0.1);
+  color: var(--coral-deep);
+}
+
+.skill-icon .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.skill-price {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.skill-price.paid {
+  background: rgba(239, 106, 76, 0.1);
+  color: var(--coral-deep);
+}
+
+.skill-price.free {
+  background: rgba(79, 138, 104, 0.1);
+  color: var(--green);
+}
+
+.skill-card h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.skill-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+
+.skill-card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted-2);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.skill-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--ink);
+  letter-spacing: 0.06em;
+  transition: color 0.2s ease;
+}
+
+.skill-card-cta .icon {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover .skill-card-cta {
+  color: var(--coral-deep);
+}
+
+.skill-card:hover .skill-card-cta .icon {
+  transform: translate(2px, -2px);
+}
+
+.skills-note {
+  margin: 2px 2px 0;
+  color: var(--muted-2);
+  font-size: 0.66rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
    In development
    -------------------------------------------------------------------------- */
 
@@ -2993,7 +3194,8 @@ body.nav-open {
 
 @media (max-width: 1080px) {
   .purpose-head,
-  .desk-grid {
+  .desk-grid,
+  .skills-grid {
     grid-template-columns: 1fr;
   }
 
@@ -3018,6 +3220,11 @@ body.nav-open {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
+  }
+
+  .skills-copy,
+  .skills-cards {
+    max-width: 760px;
   }
 
   .contact-grid {
@@ -3086,7 +3293,12 @@ body.nav-open {
     padding: 20px;
   }
 
-  .desk-actions .btn {
+  .skill-card {
+    padding: 20px;
+  }
+
+  .desk-actions .btn,
+  .skills-actions .btn {
     width: 100%;
   }
 }

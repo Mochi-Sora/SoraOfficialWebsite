@@ -79,7 +79,10 @@ SoraOfficialWebsite/
   and [LICENSE](https://github.com/Mochi-Sora/SoraDesk/blob/main/LICENSE).
 - **SoraPlatform roadmap** — the official SoraPlatform roadmap document,
   covering all ten products and their current status.
-- **SoraSkills** — the [Agensi creator page](https://www.agensi.io/creators/mochi-sora).
+- **SoraSkills** — the [Agensi creator page](https://www.agensi.io/creators/mochi-sora)
+  and the two live skill listings:
+  [State First Backend](https://www.agensi.io/skills/state-first-backend) and
+  [context handoff](https://www.agensi.io/skills/context-handoff).
 - **Community** — the [SoraPlatform Discord server](https://discord.gg/s8W6JfBSMH).
 
 The local files in `documents/` are provided for convenience. The versions in
@@ -87,19 +90,20 @@ the GitHub repositories are canonical.
 
 ## Scope
 
-The single page is organised into seven sections: the hero profile card, the
-purpose of SoraPlatform, the ten-product roadmap, SoraAgent, the newly built
-SoraDesk, the products still in development, and contact information. The site
+The single page is organised into eight sections: the hero profile card, the
+purpose of SoraPlatform, the ten-product roadmap, SoraAgent, SoraDesk,
+SoraSkills, the products still in development, and contact information. The site
 covers all ten SoraPlatform products — SoraAgent, SoraDesk, SoraSkills,
 SoraPlugins, SoraOS, SoraOffice, SoraCreate, SoraBrowser, SoraMusic, and
 SoraSocials. MasonAgent appears only as historical context in the profile copy;
 there are no separate archive cards.
 
-SoraAgent, SoraDesk, and SoraSkills are marked live. SoraDesk v0.1.0 is published:
+SoraAgent, SoraDesk, and SoraSkills are marked live. SoraDesk is live at v0.1.0:
 the Tauri v2 client, the local Python bridge, and signed updater packaging are
 implemented against the frozen v1 protocol. The macOS and Windows installers are
-unsigned for now; the updater artifacts are signed. The remaining seven products are
-marked in development.
+unsigned for now; the updater artifacts are signed. SoraSkills is live on Agensi
+with two skills: State First Backend and context handoff. The remaining seven
+products are marked in development.
 
 The unrelated `undertale-game-for-no-reason-at-all` repository is intentionally
 excluded.
@@ -112,9 +116,11 @@ excluded.
   are implemented in `assets/js/main.js`.
 - The page is intentionally consolidated: the hero introduces the person and links
   to his main profiles; the purpose section states the mission; the roadmap is the
-  single product list; SoraAgent and SoraDesk get the technical detail; the
+  single product list; SoraAgent, SoraDesk, and SoraSkills get the detail; the
   in-development section covers the remaining products; and contact links close
   the page. External links also live in the header, the hero card, and the footer.
+- The SoraSkills section lists the two live Agensi skills — State First Backend
+  and context handoff — with direct links to each listing and the creator profile.
 - The hero card is a compact profile card: avatar, name, and direct GitHub,
   Agensi, and Discord links.
 - The SoraDesk section includes an HTML/CSS preview of the app shell rather than a

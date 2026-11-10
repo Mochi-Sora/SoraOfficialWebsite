@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mochi-Sora — Tam Kuan Hou | SoraPlatform, SoraAgent &amp; SoraDesk</title>
-  <meta name="description" content="The official website of Tam Kuan Hou (譚君浩 / Marco Tam), known as Mochi-Sora — independent software developer and creator of SoraPlatform. Explore the purpose, the ten-product roadmap, the SoraAgent engine, and the newly built SoraDesk desktop client.">
+  <title>Mochi-Sora — Tam Kuan Hou | SoraPlatform, SoraAgent, SoraDesk &amp; SoraSkills</title>
+  <meta name="description" content="The official website of Tam Kuan Hou (譚君浩 / Marco Tam), known as Mochi-Sora — independent software developer and creator of SoraPlatform. Explore the purpose, the ten-product roadmap, the SoraAgent engine, the SoraDesk desktop client, and SoraSkills on Agensi.">
   <meta name="author" content="Tam Kuan Hou (Mochi-Sora)">
   <meta name="theme-color" content="#f6f1e7">
   <meta name="robots" content="index, follow">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Mochi-Sora — Official Website">
-  <meta property="og:title" content="Mochi-Sora — Tam Kuan Hou | SoraPlatform, SoraAgent &amp; SoraDesk">
-  <meta property="og:description" content="Open-source, independent software built against telemetry and bloat. Meet SoraPlatform, the SoraAgent engine, and the newly built SoraDesk desktop client.">
+  <meta property="og:title" content="Mochi-Sora — Tam Kuan Hou | SoraPlatform, SoraAgent, SoraDesk &amp; SoraSkills">
+  <meta property="og:description" content="Open-source, independent software built against telemetry and bloat. Meet SoraPlatform, the SoraAgent engine, the SoraDesk desktop client, and framework-agnostic SoraSkills on Agensi.">
   <meta property="og:image" content="assets/img/og-cover.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mochi-Sora — Tam Kuan Hou">
-  <meta name="twitter:description" content="Open-source, independent software built against telemetry and bloat. Creator of SoraPlatform, SoraAgent, and SoraDesk.">
+  <meta name="twitter:description" content="Open-source, independent software built against telemetry and bloat. Creator of SoraPlatform, SoraAgent, SoraDesk, and SoraSkills.">
   <meta name="twitter:image" content="assets/img/og-cover.png">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -35,7 +35,7 @@
         "name": "Tam Kuan Hou",
         "alternateName": ["Mochi-Sora", "Marco Tam", "譚君浩"],
         "jobTitle": "Independent Software Developer",
-        "description": "Independent software developer building lightweight, efficient projects in Python. Creator of SoraPlatform, SoraAgent, and SoraDesk.",
+        "description": "Independent software developer building lightweight, efficient projects in Python. Creator of SoraPlatform, SoraAgent, SoraDesk, and SoraSkills.",
         "url": "https://github.com/Mochi-Sora",
         "sameAs": [
           "https://github.com/Mochi-Sora",
@@ -72,6 +72,43 @@
         "url": "https://github.com/Mochi-Sora/SoraDesk",
         "license": "https://www.gnu.org/licenses/agpl-3.0.html",
         "author": { "@id": "#person" }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "#soraskills",
+        "name": "SoraSkills",
+        "description": "Framework-agnostic agent skills published on Agensi: State First Backend and context handoff.",
+        "url": "https://www.agensi.io/creators/mochi-sora",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "State First Backend",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Any",
+              "description": "Durable working state and curated knowledge for long-running AI agents using an append-only file contract.",
+              "url": "https://www.agensi.io/skills/state-first-backend",
+              "offers": { "@type": "Offer", "price": "19", "priceCurrency": "USD" },
+              "author": { "@id": "#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "context handoff",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Any",
+              "description": "Create structured, compact handoffs to preserve task context across sessions and prevent agent amnesia.",
+              "url": "https://www.agensi.io/skills/context-handoff",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+              "author": { "@id": "#person" }
+            }
+          }
+        ]
       },
       {
         "@type": "WebSite",
@@ -134,6 +171,7 @@
         <a href="#roadmap">Roadmap</a>
         <a href="#soraagent">SoraAgent</a>
         <a href="#soradesk">SoraDesk</a>
+        <a href="#soraskills">SoraSkills</a>
         <a href="#in-development">In development</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -155,6 +193,7 @@
       <a href="#roadmap">Roadmap <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
       <a href="#soraagent">SoraAgent <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
       <a href="#soradesk">SoraDesk <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
+      <a href="#soraskills">SoraSkills <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
       <a href="#in-development">In development <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
       <a href="#contact">Contact <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
     </nav>
@@ -260,8 +299,8 @@
 
         <div class="purpose-facts reveal">
           <div><strong>10</strong><span>products on the roadmap</span></div>
-          <div><strong>2</strong><span>live today</span></div>
-          <div><strong>1</strong><span>built, release pending</span></div>
+          <div><strong>3</strong><span>live today</span></div>
+          <div><strong>7</strong><span>in development</span></div>
           <div><strong>0</strong><span>telemetry by design</span></div>
         </div>
       </div>
@@ -272,7 +311,7 @@
         <div class="section-head reveal">
           <p class="section-label light"><span>02</span> Roadmap</p>
           <h2 class="section-title light" id="roadmap-title"><span class="title-line">Ten products.</span> <em>One direction.</em></h2>
-          <p class="section-lede light">An engine, a desktop client, portable skills, and the tools that come next. Status is honest: live, built, or still in development.</p>
+          <p class="section-lede light">An engine, a desktop client, portable skills, and the tools that come next. Status is honest: live or still in development.</p>
         </div>
 
         <div class="roadmap-panel">
@@ -310,7 +349,7 @@
                 <div class="product-head"><span class="product-num">03</span><h3>SoraSkills</h3><span class="status-dot live" role="img" aria-label="Live" title="Live"></span></div>
                 <p>Framework-agnostic skills on Agensi: State First Backend and context handoff.</p>
               </div>
-              <a class="product-link" href="https://www.agensi.io/creators/mochi-sora" target="_blank" rel="noopener noreferrer" aria-label="SoraSkills on Agensi"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
+              <a class="product-link" href="#soraskills" aria-label="SoraSkills details"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"></use></svg></a>
             </li>
             <li class="product reveal">
               <span class="product-icon"><svg class="icon" aria-hidden="true"><use href="#i-plug"></use></svg></span>
@@ -553,10 +592,60 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
       </div>
     </section>
 
+    <section class="section skills" id="soraskills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="skills-grid">
+          <div class="skills-copy">
+            <p class="section-label reveal"><span>05</span> SoraSkills</p>
+            <h2 class="section-title reveal" id="skills-title"><span class="title-line">Portable skills,</span> <em>ready to hand off.</em></h2>
+            <p class="section-lede reveal">SoraSkills is the framework-agnostic side of SoraPlatform: compact, reusable skill packages that travel between agent tools. They are published on Agensi, so they work with any agent that loads the <code>SKILL.md</code> format — not just SoraAgent.</p>
+            <p class="skills-status reveal"><span class="live-dot" aria-hidden="true"></span> Live on Agensi · 2 skills · one free, one paid</p>
+            <div class="skills-actions reveal">
+              <a class="btn btn-primary btn-small" href="https://www.agensi.io/creators/mochi-sora" target="_blank" rel="noopener noreferrer">Visit the Agensi profile <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
+              <a class="text-link" href="#in-development">See what comes next <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"></use></svg></a>
+            </div>
+            <ul class="skills-points reveal">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Agent-agnostic.</strong> Packaged as portable skills, not SoraAgent-only plugins.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Built for long work.</strong> Durable state and clean context handoffs keep multi-session tasks coherent.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Published on Agensi.</strong> Browse, buy, and download directly from the creator profile.</span></li>
+            </ul>
+          </div>
+
+          <div class="skills-cards">
+            <a class="skill-card reveal" href="https://www.agensi.io/skills/state-first-backend" target="_blank" rel="noopener noreferrer">
+              <div class="skill-card-top">
+                <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg></span>
+                <span class="skill-price paid">$19</span>
+              </div>
+              <h3>State First Backend</h3>
+              <p>Durable working state and curated knowledge for long-running AI agents, built on an append-only file contract.</p>
+              <div class="skill-card-foot">
+                <span>State &amp; knowledge</span>
+                <span class="skill-card-cta">View on Agensi <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></span>
+              </div>
+            </a>
+            <a class="skill-card reveal" href="https://www.agensi.io/skills/context-handoff" target="_blank" rel="noopener noreferrer">
+              <div class="skill-card-top">
+                <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-route"></use></svg></span>
+                <span class="skill-price free">Free</span>
+              </div>
+              <h3>context handoff</h3>
+              <p>Create structured, compact handoffs that preserve task context across sessions and prevent agent amnesia.</p>
+              <div class="skill-card-foot">
+                <span>Context continuity</span>
+                <span class="skill-card-cta">View on Agensi <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></span>
+              </div>
+            </a>
+            <p class="skills-note reveal">Skills are published and delivered through Agensi. The creator profile is the canonical list.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section development" id="in-development" aria-labelledby="development-title">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-label"><span>05</span> In development</p>
+          <p class="section-label"><span>06</span> In development</p>
           <h2 class="section-title" id="development-title"><span class="title-line">The rest of the</span> <em>platform.</em></h2>
           <p class="section-lede">Seven products are taking shape. They will ship when they are ready — with the same rules: open source, no telemetry, and local control.</p>
         </div>
@@ -643,7 +732,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
     <section class="section section-dark contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-label light"><span>06</span> Contact</p>
+          <p class="section-label light"><span>07</span> Contact</p>
           <h2 class="section-title light" id="contact-title"><span class="title-line">Say hello to</span> <em>Mochi-Sora.</em></h2>
           <p class="section-lede light">The SoraPlatform Discord is the fastest way to reach the community and me. Code and releases live on GitHub; framework-agnostic skills live on Agensi.</p>
         </div>
@@ -682,7 +771,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
           <img src="assets/img/mochi-sora-avatar.png" alt="" width="48" height="48">
           <div>
             <strong>Tam Kuan Hou <span lang="zh-Hant">譚君浩</span> · Marco Tam</strong>
-            <p>Independent software developer · Creator of SoraPlatform, SoraAgent, and SoraDesk.</p>
+            <p>Independent software developer · Creator of SoraPlatform, SoraAgent, SoraDesk, and SoraSkills.</p>
           </div>
         </div>
       </div>
@@ -712,6 +801,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
         <a href="#roadmap">Roadmap</a>
         <a href="#soraagent">SoraAgent</a>
         <a href="#soradesk">SoraDesk</a>
+        <a href="#soraskills">SoraSkills</a>
         <a href="#in-development">In development</a>
         <a href="#contact">Contact</a>
       </nav>
