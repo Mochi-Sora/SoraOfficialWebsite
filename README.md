@@ -102,7 +102,7 @@ SoraSkills, SoraPlugins, SoraOS, SoraOffice, SoraCreate, SoraBrowser, SoraMusic,
 and SoraSocials. MasonAgent appears only as historical context in the profile
 copy; there are no separate archive cards.
 
-SoraAgent, SoraDesk, and SoraSkills are marked live. SoraDesk is live at v0.1.0:
+SoraAgent, SoraDesk, and SoraSkills are marked live. SoraDesk is live at v0.1.1:
 the Tauri v2 client, the local Python bridge, and signed updater packaging are
 implemented against the frozen v1 protocol. The macOS and Windows installers are
 unsigned for now; the updater artifacts are signed. SoraSkills is live on Agensi
