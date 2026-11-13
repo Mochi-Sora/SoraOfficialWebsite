@@ -2363,22 +2363,23 @@ body.nav-open {
    -------------------------------------------------------------------------- */
 
 .bench {
-  background: var(--dark);
-  color: var(--dark-text);
+  background: var(--paper-2);
 }
 
 .bench-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: clamp(24px, 4vw, 56px);
-  align-items: start;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: stretch;
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--cream);
+  box-shadow: var(--shadow-sm);
 }
 
 .bench-overall {
-  padding: clamp(24px, 3vw, 34px);
-  border: 1px solid rgba(248, 240, 227, 0.14);
-  border-radius: var(--radius-lg);
-  background: rgba(248, 240, 227, 0.04);
+  min-width: 0;
 }
 
 .bench-topline {
@@ -2391,153 +2392,177 @@ body.nav-open {
 .bench-live {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  color: var(--dark-muted);
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .bench-live .live-dot {
-  background: #7fbd97;
-  box-shadow: 0 0 0 4px rgba(127, 189, 151, 0.14);
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(79, 138, 104, 0.12);
 }
 
 .bench.is-snapshot .bench-live .live-dot {
   background: var(--amber);
-  box-shadow: 0 0 0 4px rgba(184, 122, 47, 0.16);
+  box-shadow: 0 0 0 4px rgba(184, 122, 47, 0.14);
 }
 
 .bench-source {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  color: var(--dark-muted);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color 0.2s ease;
 }
 
 .bench-source:hover {
-  color: var(--dark-text);
+  color: var(--ink);
 }
 
 .bench-source .icon {
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
 }
 
 .bench-score-row {
   display: flex;
-  align-items: center;
-  gap: clamp(20px, 3vw, 32px);
-  margin-top: 26px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 24px;
 }
 
 .bench-dial {
-  --p: 82.4;
-  position: relative;
-  display: grid;
-  flex: none;
-  place-items: center;
-  width: clamp(140px, 15vw, 176px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: conic-gradient(var(--coral) calc(var(--p) * 1%), rgba(248, 240, 227, 0.12) 0);
+  position: static;
+  display: flex;
+  align-items: baseline;
+  width: auto;
+  aspect-ratio: auto;
+  border-radius: 0;
+  background: none;
 }
 
 .bench-dial::after {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border-radius: 50%;
-  background: var(--dark-2);
+  content: none;
 }
 
 .bench-dial-inner {
-  position: relative;
-  z-index: 1;
-  text-align: center;
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  text-align: left;
 }
 
 .bench-dial-num {
-  display: block;
+  color: var(--ink);
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: clamp(3.1rem, 4.8vw, 4.3rem);
   font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.05em;
+  line-height: 0.86;
+  letter-spacing: -0.06em;
 }
 
 .bench-dial-den {
-  display: block;
-  margin-top: 4px;
-  color: var(--dark-muted);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.bench-verdict {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .bench-grade {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
   margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
+  padding: 5px 10px;
+  border: 1px solid rgba(239, 106, 76, 0.28);
+  border-radius: 999px;
+  background: rgba(239, 106, 76, 0.08);
+  color: var(--coral-deep);
+  font-family: var(--font-body);
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .bench-grade strong {
-  color: var(--coral-soft);
-  font-weight: 600;
+  color: var(--coral-deep);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .bench-verdict-note {
-  max-width: 30ch;
-  margin: 8px 0 0;
-  color: var(--dark-muted);
-  font-size: 0.78rem;
-  line-height: 1.55;
+  max-width: 32ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
 .bench-meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px 20px;
-  margin: 26px 0 0;
+  gap: 14px 22px;
+  margin: 24px 0 0;
   padding-top: 20px;
-  border-top: 1px solid rgba(248, 240, 227, 0.12);
+  border-top: 1px solid var(--line);
 }
 
 .bench-meta dt {
-  color: var(--dark-muted);
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .bench-meta dd {
   margin: 3px 0 0;
-  font-size: 0.8rem;
+  color: var(--ink);
+  font-size: 0.79rem;
   line-height: 1.45;
+}
+
+.bench-suites {
+  min-width: 0;
+  padding-left: clamp(24px, 4vw, 56px);
+  border-left: 1px solid var(--line);
 }
 
 .bench-subhead {
   margin: 0 0 18px;
-  color: var(--dark-muted);
-  font-size: 0.58rem;
-  font-weight: 700;
+  color: var(--muted);
+  font-size: 0.56rem;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .bench-suite-list {
   display: grid;
-  gap: 17px;
+  gap: 16px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2551,33 +2576,34 @@ body.nav-open {
 }
 
 .bench-suite-name {
-  font-size: 0.84rem;
-  font-weight: 500;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .bench-suite-meta {
   display: inline-flex;
   align-items: baseline;
-  gap: 10px;
-  color: var(--dark-muted);
-  font-size: 0.64rem;
+  gap: 9px;
+  color: var(--muted);
+  font-size: 0.62rem;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
 .bench-suite-meta strong {
-  color: var(--dark-text);
+  color: var(--ink);
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 600;
 }
 
 .bench-suite-bar {
-  height: 6px;
+  height: 5px;
   margin-top: 8px;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(248, 240, 227, 0.12);
+  background: rgba(26, 23, 19, 0.09);
 }
 
 .bench-suite-bar span {
@@ -2591,47 +2617,50 @@ body.nav-open {
 .bench-metrics {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
   margin-top: clamp(28px, 4vw, 40px);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 
 .bench-metric {
   padding: 18px;
-  border: 1px solid rgba(248, 240, 227, 0.12);
-  border-radius: var(--radius-md);
-  background: rgba(248, 240, 227, 0.03);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--cream);
 }
 
 .bench-metric-value {
   margin: 0;
+  color: var(--ink);
   font-family: var(--font-display);
-  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.04em;
 }
 
 .bench-metric-name {
-  margin: 7px 0 0;
-  color: var(--dark-muted);
-  font-size: 0.7rem;
-  font-weight: 600;
-  line-height: 1.4;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  text-transform: uppercase;
 }
 
 .bench-metric-note {
   display: block;
   margin-top: 3px;
-  color: rgba(185, 174, 158, 0.7);
-  font-size: 0.58rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: var(--muted);
+  font-size: 0.52rem;
+  letter-spacing: 0.08em;
 }
 
 .bench-metric-foot {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   margin-top: 14px;
 }
 
@@ -2640,26 +2669,26 @@ body.nav-open {
   height: 3px;
   overflow: hidden;
   border-radius: 999px;
-  background: rgba(248, 240, 227, 0.12);
+  background: rgba(26, 23, 19, 0.09);
 }
 
 .bench-metric-bar i {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: var(--coral-soft);
+  background: var(--coral);
 }
 
 .bench-metric-score {
-  color: var(--dark-muted);
-  font-size: 0.6rem;
+  color: var(--muted);
+  font-size: 0.58rem;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
 .bench-metric-score strong {
-  color: var(--dark-text);
-  font-weight: 600;
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .bench-foot {
@@ -2669,31 +2698,38 @@ body.nav-open {
   gap: 24px;
   margin-top: clamp(28px, 4vw, 40px);
   padding-top: 22px;
-  border-top: 1px solid rgba(248, 240, 227, 0.12);
+  border-top: 1px solid var(--line);
 }
 
 .bench-foot p {
-  max-width: 62ch;
+  max-width: 64ch;
   margin: 0;
-  color: var(--dark-muted);
-  font-size: 0.78rem;
+  color: var(--muted);
+  font-size: 0.76rem;
   line-height: 1.6;
 }
 
 .bench-foot p a {
-  color: var(--dark-text);
+  color: var(--ink);
   text-decoration: underline;
-  text-decoration-color: rgba(248, 240, 227, 0.3);
+  text-decoration-color: rgba(26, 23, 19, 0.25);
   text-underline-offset: 3px;
 }
 
 .bench-foot p a:hover {
-  text-decoration-color: var(--coral-soft);
+  text-decoration-color: var(--coral);
 }
 
 @media (max-width: 1080px) {
   .bench-grid {
     grid-template-columns: 1fr;
+  }
+
+  .bench-suites {
+    padding-top: 24px;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
   }
 
   .bench-metrics {
@@ -2710,34 +2746,23 @@ body.nav-open {
 }
 
 @media (max-width: 620px) {
-  .bench-score-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .bench-meta {
-    grid-template-columns: 1fr;
-  }
-
-  .bench-metrics {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .bench-dial-num {
+    font-size: 2.9rem;
   }
 
   .bench-metric {
     padding: 15px;
   }
 
-  .bench-metric-value {
-    font-size: 1.05rem;
-  }
-
-  .bench-metric-name {
-    font-size: 0.65rem;
-  }
-
   .bench-foot {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .bench-meta {
+    grid-template-columns: 1fr;
   }
 }
 
