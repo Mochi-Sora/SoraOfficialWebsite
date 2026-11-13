@@ -91,7 +91,7 @@ the GitHub repositories are canonical.
 ## Scope
 
 The single page is organised into eight sections: the hero profile card, the
-purpose of SoraPlatform, the ten-product roadmap, SoraAgent, SoraDesk,
+ten-product roadmap, the purpose of SoraPlatform, SoraAgent, SoraDesk,
 SoraSkills, the products still in development, and contact information. The site
 covers all ten SoraPlatform products — SoraAgent, SoraDesk, SoraSkills,
 SoraPlugins, SoraOS, SoraOffice, SoraCreate, SoraBrowser, SoraMusic, and
@@ -115,10 +115,11 @@ excluded.
 - The install tabs, copy buttons, mobile navigation, and scroll-reveal effects
   are implemented in `assets/js/main.js`.
 - The page is intentionally consolidated: the hero introduces the person and links
-  to his main profiles; the purpose section states the mission; the roadmap is the
-  single product list; SoraAgent, SoraDesk, and SoraSkills get the detail; the
-  in-development section covers the remaining products; and contact links close
-  the page. External links also live in the header, the hero card, and the footer.
+  to his main profiles; the roadmap is the single product list; the purpose
+  section states the mission; SoraAgent, SoraDesk, and SoraSkills get the detail;
+  the in-development section covers the remaining products; and contact links
+  close the page. External links also live in the header, the hero card, and the
+  footer.
 - The SoraSkills section lists the two live Agensi skills — State First Backend
   and context handoff — with direct links to each listing and the creator profile.
 - The hero card is a compact profile card: avatar, name, and direct GitHub,
