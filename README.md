@@ -47,6 +47,7 @@ SoraOfficialWebsite/
 ├── assets/
 │   ├── css/styles.css         # All styling and responsive rules
 │   ├── js/main.js             # Navigation, tabs, copy, reveal
+│   ├── js/scoreboard.js       # Fetches and renders the live benchmark data
 │   ├── fonts/                 # Self-hosted Sora, Inter, Instrument Serif
 │   └── img/                   # Avatar, favicon, social preview
 ├── documents/                 # Local copies of the official documents
@@ -79,6 +80,9 @@ SoraOfficialWebsite/
   and [LICENSE](https://github.com/Mochi-Sora/SoraDesk/blob/main/LICENSE).
 - **SoraPlatform roadmap** — the official SoraPlatform roadmap document,
   covering all ten products and their current status.
+- **Benchmarks** — the public
+  [SoraAgent-Benchmarks](https://github.com/Mochi-Sora/SoraAgent-Benchmarks)
+  repository; its live scoreboard drives the Benchmarks section.
 - **SoraSkills** — the [Agensi creator page](https://www.agensi.io/creators/mochi-sora)
   and the two live skill listings:
   [State First Backend](https://www.agensi.io/skills/state-first-backend) and
@@ -90,13 +94,13 @@ the GitHub repositories are canonical.
 
 ## Scope
 
-The single page is organised into eight sections: the hero profile card, the
-ten-product roadmap, the purpose of SoraPlatform, SoraAgent, SoraDesk,
-SoraSkills, the products still in development, and contact information. The site
-covers all ten SoraPlatform products — SoraAgent, SoraDesk, SoraSkills,
-SoraPlugins, SoraOS, SoraOffice, SoraCreate, SoraBrowser, SoraMusic, and
-SoraSocials. MasonAgent appears only as historical context in the profile copy;
-there are no separate archive cards.
+The single page is organised into nine sections: the hero profile card, the
+ten-product roadmap, the live benchmark scoreboard, the purpose of SoraPlatform,
+SoraAgent, SoraDesk, SoraSkills, the products still in development, and contact
+information. The site covers all ten SoraPlatform products — SoraAgent, SoraDesk,
+SoraSkills, SoraPlugins, SoraOS, SoraOffice, SoraCreate, SoraBrowser, SoraMusic,
+and SoraSocials. MasonAgent appears only as historical context in the profile
+copy; there are no separate archive cards.
 
 SoraAgent, SoraDesk, and SoraSkills are marked live. SoraDesk is live at v0.1.0:
 the Tauri v2 client, the local Python bridge, and signed updater packaging are
@@ -115,11 +119,21 @@ excluded.
 - The install tabs, copy buttons, mobile navigation, and scroll-reveal effects
   are implemented in `assets/js/main.js`.
 - The page is intentionally consolidated: the hero introduces the person and links
-  to his main profiles; the roadmap is the single product list; the purpose
-  section states the mission; SoraAgent, SoraDesk, and SoraSkills get the detail;
-  the in-development section covers the remaining products; and contact links
-  close the page. External links also live in the header, the hero card, and the
-  footer.
+  to his main profiles; the roadmap is the single product list; the benchmark
+  section shows the current live score; the purpose section states the mission;
+  SoraAgent, SoraDesk, and SoraSkills get the detail; the in-development section
+  covers the remaining products; and contact links close the page. External links
+  also live in the header, the hero card, and the footer.
+- The Benchmarks section ships with a snapshot of the latest run, then
+  `assets/js/scoreboard.js` fetches
+  `SoraAgent-live-scoreboard.md` from the public SoraAgent-Benchmarks repository
+  on load and replaces the snapshot values in place. If the fetch fails, the
+  snapshot stays and the status label switches to "Snapshot". Scores come from
+  the benchmark repository; the site does not compute or edit them.
+- Updating the scoreboard requires no site deploy: push a new
+  `SoraAgent-live-scoreboard.md` to SoraAgent-Benchmarks and the next page load
+  picks it up. The fetch is a plain GET to GitHub's raw CDN — no cookies, no
+  analytics, and no other runtime network calls.
 - The SoraSkills section lists the two live Agensi skills — State First Backend
   and context handoff — with direct links to each listing and the creator profile.
 - The hero card is a compact profile card: avatar, name, and direct GitHub,

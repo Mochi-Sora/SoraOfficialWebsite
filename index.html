@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mochi-Sora — Tam Kuan Hou | SoraPlatform, SoraAgent, SoraDesk &amp; SoraSkills</title>
-  <meta name="description" content="The official website of Tam Kuan Hou (譚君浩 / Marco Tam), known as Mochi-Sora — independent software developer and creator of SoraPlatform. Explore the ten-product roadmap, the purpose, the SoraAgent engine, the SoraDesk desktop client, and SoraSkills on Agensi.">
+  <meta name="description" content="The official website of Tam Kuan Hou (譚君浩 / Marco Tam), known as Mochi-Sora — independent software developer and creator of SoraPlatform. Explore the ten-product roadmap, the live benchmark scoreboard, the purpose, the SoraAgent engine, the SoraDesk desktop client, and SoraSkills on Agensi.">
   <meta name="author" content="Tam Kuan Hou (Mochi-Sora)">
   <meta name="theme-color" content="#f6f1e7">
   <meta name="robots" content="index, follow">
@@ -12,16 +12,17 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Mochi-Sora — Official Website">
   <meta property="og:title" content="Mochi-Sora — Tam Kuan Hou | SoraPlatform, SoraAgent, SoraDesk &amp; SoraSkills">
-  <meta property="og:description" content="Open-source, independent software built against telemetry and bloat. Meet SoraPlatform, the SoraAgent engine, the SoraDesk desktop client, and framework-agnostic SoraSkills on Agensi.">
+  <meta property="og:description" content="Open-source, independent software built against telemetry and bloat. Meet SoraPlatform, the SoraAgent engine, the SoraDesk desktop client, framework-agnostic SoraSkills on Agensi, and the live benchmark scoreboard.">
   <meta property="og:image" content="assets/img/og-cover.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mochi-Sora — Tam Kuan Hou">
-  <meta name="twitter:description" content="Open-source, independent software built against telemetry and bloat. Creator of SoraPlatform, SoraAgent, SoraDesk, and SoraSkills.">
+  <meta name="twitter:description" content="Open-source, independent software built against telemetry and bloat. Creator of SoraPlatform, SoraAgent, SoraDesk, and SoraSkills — with every release scored in public.">
   <meta name="twitter:image" content="assets/img/og-cover.png">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/Sora.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script>document.documentElement.classList.add('js');</script>
 
@@ -168,6 +169,7 @@
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#roadmap">Roadmap</a>
+        <a href="#benchmarks">Benchmarks</a>
         <a href="#purpose">Purpose</a>
         <a href="#soraagent">SoraAgent</a>
         <a href="#soradesk">SoraDesk</a>
@@ -190,6 +192,7 @@
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
       <a href="#roadmap">Roadmap <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
+      <a href="#benchmarks">Benchmarks <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
       <a href="#purpose">Purpose <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
       <a href="#soraagent">SoraAgent <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
       <a href="#soradesk">SoraDesk <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
@@ -366,11 +369,178 @@
       </div>
     </section>
 
+    <section class="section bench" id="benchmarks" aria-labelledby="bench-title" data-scoreboard>
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label light"><span>02</span> Benchmarks</p>
+          <h2 class="section-title light" id="bench-title"><span class="title-line">Measured,</span> <em>not claimed.</em></h2>
+          <p class="section-lede light">Every SoraAgent release is scored by the same seven-suite benchmark. These numbers load from the public scoreboard, so they move as the engine does.</p>
+        </div>
+
+        <div class="bench-grid">
+          <aside class="bench-overall reveal">
+            <div class="bench-topline">
+              <span class="bench-live"><span class="live-dot" aria-hidden="true"></span><span data-bench="status">Latest</span></span>
+              <a class="bench-source" href="https://github.com/Mochi-Sora/SoraAgent-Benchmarks" target="_blank" rel="noopener noreferrer">Source <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
+            </div>
+
+            <div class="bench-score-row">
+              <div class="bench-dial" data-bench-dial style="--p:82.4" role="img" aria-label="Overall benchmark score 82.4 out of 100">
+                <div class="bench-dial-inner">
+                  <span class="bench-dial-num" data-bench="overall">82.4</span>
+                  <span class="bench-dial-den">/ 100</span>
+                </div>
+              </div>
+              <div class="bench-verdict">
+                <p class="bench-grade">Grade <strong data-bench="grade">B</strong></p>
+                <p class="bench-verdict-note">Scored across seven suites: tokens, tools, memory, dreaming, speed, autonomy, caching.</p>
+              </div>
+            </div>
+
+            <dl class="bench-meta">
+              <div><dt>Model</dt><dd data-bench="model">DeepSeek V4.1 Flash (deepseek-flash)</dd></div>
+              <div><dt>Mode</dt><dd data-bench="mode">live OpenAI-compatible API</dd></div>
+              <div><dt>Scored runs</dt><dd data-bench="runs">62</dd></div>
+              <div><dt>Run duration</dt><dd data-bench="duration">290.92 s</dd></div>
+              <div><dt>Updated</dt><dd><time data-bench="updated" datetime="2026-11-12T12:27:38Z">12 Nov 2026 · 12:27 UTC</time></dd></div>
+            </dl>
+          </aside>
+
+          <div class="bench-suites reveal">
+            <h3 class="bench-subhead">Suite scores</h3>
+            <ul class="bench-suite-list">
+              <li class="bench-suite" data-suite="Token usage">
+                <div class="bench-suite-head">
+                  <span class="bench-suite-name">Token usage</span>
+                  <span class="bench-suite-meta"><span data-suite-runs>8 runs</span><strong data-suite-score>69.7</strong></span>
+                </div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Token usage score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="69.7" data-suite-bar><span style="width:69.7%"></span></div>
+              </li>
+              <li class="bench-suite" data-suite="Tool-use accuracy">
+                <div class="bench-suite-head">
+                  <span class="bench-suite-name">Tool-use accuracy</span>
+                  <span class="bench-suite-meta"><span data-suite-runs>20 runs</span><strong data-suite-score>91.1</strong></span>
+                </div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Tool-use accuracy score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="91.1" data-suite-bar><span style="width:91.1%"></span></div>
+              </li>
+              <li class="bench-suite" data-suite="Memory retention">
+                <div class="bench-suite-head">
+                  <span class="bench-suite-name">Memory retention</span>
+                  <span class="bench-suite-meta"><span data-suite-runs>14 runs</span><strong data-suite-score>94.8</strong></span>
+                </div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Memory retention score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="94.8" data-suite-bar><span style="width:94.8%"></span></div>
+              </li>
+              <li class="bench-suite" data-suite="Dreaming mechanism">
+                <div class="bench-suite-head">
+                  <span class="bench-suite-name">Dreaming mechanism</span>
+                  <span class="bench-suite-meta"><span data-suite-runs>—</span><strong data-suite-score>100.0</strong></span>
+                </div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Dreaming mechanism score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" data-suite-bar><span style="width:100%"></span></div>
+              </li>
+              <li class="bench-suite" data-suite="Response speed">
+                <div class="bench-suite-head">
+                  <span class="bench-suite-name">Response speed</span>
+                  <span class="bench-suite-meta"><span data-suite-runs>6 runs</span><strong data-suite-score>74.0</strong></span>
+                </div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Response speed score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="74" data-suite-bar><span style="width:74%"></span></div>
+              </li>
+              <li class="bench-suite" data-suite="Autonomous task completion">
+                <div class="bench-suite-head">
+                  <span class="bench-suite-name">Autonomous task completion</span>
+                  <span class="bench-suite-meta"><span data-suite-runs>12 runs</span><strong data-suite-score>62.9</strong></span>
+                </div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Autonomous task completion score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62.9" data-suite-bar><span style="width:62.9%"></span></div>
+              </li>
+              <li class="bench-suite" data-suite="Prompt caching">
+                <div class="bench-suite-head">
+                  <span class="bench-suite-name">Prompt caching</span>
+                  <span class="bench-suite-meta"><span data-suite-runs>2 runs</span><strong data-suite-score>84.3</strong></span>
+                </div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Prompt caching score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="84.3" data-suite-bar><span style="width:84.3%"></span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bench-metrics">
+          <article class="bench-metric reveal" data-metric="Tool selection F1">
+            <p class="bench-metric-value" data-metric-value>93.3%</p>
+            <h3 class="bench-metric-name">Tool selection F1</h3>
+            <div class="bench-metric-foot">
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:98.2%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>98.2</strong> /100</span>
+            </div>
+          </article>
+          <article class="bench-metric reveal" data-metric="End-to-end answer accuracy">
+            <p class="bench-metric-value" data-metric-value>100.0%</p>
+            <h3 class="bench-metric-name">Answer accuracy</h3>
+            <div class="bench-metric-foot">
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:100%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>100.0</strong> /100</span>
+            </div>
+          </article>
+          <article class="bench-metric reveal" data-metric="Retrieval hit rate">
+            <p class="bench-metric-value" data-metric-value>100.0%</p>
+            <h3 class="bench-metric-name">Retrieval hit rate</h3>
+            <div class="bench-metric-foot">
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:100%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>100.0</strong> /100</span>
+            </div>
+          </article>
+          <article class="bench-metric reveal" data-metric="Approval compliance">
+            <p class="bench-metric-value" data-metric-value>100.0%</p>
+            <h3 class="bench-metric-name">Approval compliance</h3>
+            <div class="bench-metric-foot">
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:100%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>100.0</strong> /100</span>
+            </div>
+          </article>
+          <article class="bench-metric reveal" data-metric="Retained facts per 1k recall tokens">
+            <p class="bench-metric-value" data-metric-value>25.84 facts/1k</p>
+            <h3 class="bench-metric-name">Recall density</h3>
+            <div class="bench-metric-foot">
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:100%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>100.0</strong> /100</span>
+            </div>
+          </article>
+          <article class="bench-metric reveal" data-metric="Effective tokens per run (after prefix reuse)">
+            <p class="bench-metric-value" data-metric-value>1,746 tokens</p>
+            <h3 class="bench-metric-name">Effective tokens per run<span class="bench-metric-note">lower is better</span></h3>
+            <div class="bench-metric-foot">
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:100%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>100.0</strong> /100</span>
+            </div>
+          </article>
+          <article class="bench-metric reveal" data-metric="Total tokens per run">
+            <p class="bench-metric-value" data-metric-value>8,194 tokens</p>
+            <h3 class="bench-metric-name">Total tokens per run<span class="bench-metric-note">lower is better</span></h3>
+            <div class="bench-metric-foot">
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:67.1%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>67.1</strong> /100</span>
+            </div>
+          </article>
+          <article class="bench-metric reveal" data-metric="End-to-end latency (p95)">
+            <p class="bench-metric-value" data-metric-value>7.09 s</p>
+            <h3 class="bench-metric-name">End-to-end latency (p95)<span class="bench-metric-note">lower is better</span></h3>
+            <div class="bench-metric-foot">
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:42.3%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>42.3</strong> /100</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="bench-foot reveal">
+          <p>Scores are normalized 0–100 against suite targets; lower-is-better metrics are inverted, and weak suites stay in the table. The full run is published in the <a href="https://github.com/Mochi-Sora/SoraAgent-Benchmarks" target="_blank" rel="noopener noreferrer">SoraAgent-Benchmarks</a> repository.</p>
+          <a class="btn btn-light btn-small" href="https://github.com/Mochi-Sora/SoraAgent-Benchmarks/blob/main/SoraAgent-live-scoreboard.md" target="_blank" rel="noopener noreferrer">Full scoreboard <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
     <section class="section purpose" id="purpose" aria-labelledby="purpose-title">
       <div class="container">
         <div class="purpose-head">
           <div class="purpose-title-wrap">
-            <p class="section-label reveal"><span>02</span> Purpose</p>
+            <p class="section-label reveal"><span>03</span> Purpose</p>
             <h2 class="section-title reveal" id="purpose-title"><span class="title-line">Software that answers</span> <em>to you.</em></h2>
           </div>
           <div class="purpose-intro">
@@ -413,7 +583,7 @@
     <section class="section flagship" id="soraagent" aria-labelledby="flagship-title">
       <div class="container">
         <div class="flagship-head reveal">
-          <p class="section-label"><span>03</span> SoraAgent</p>
+          <p class="section-label"><span>04</span> SoraAgent</p>
           <h2 class="section-title" id="flagship-title">The engine, <em>in detail.</em></h2>
           <p class="section-lede">The central engine of SoraPlatform. A model-agnostic Python harness: the model/tool loop is deliberately small; approval, validation, evaluation, memory, and identity sit in explicit layers around it.</p>
         </div>
@@ -504,7 +674,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
       <div class="container">
         <div class="desk-grid">
           <div class="desk-copy">
-            <p class="section-label light reveal"><span>04</span> SoraDesk</p>
+            <p class="section-label light reveal"><span>05</span> SoraDesk</p>
             <h2 class="section-title light reveal" id="desk-title"><span class="title-line">SoraAgent,</span> <em>on your desktop.</em></h2>
             <p class="section-lede light reveal">A native Tauri v2 client for the SoraAgent runtime — chat, sessions, calendar, memories, and settings over local, SSH, or direct-IP connections.</p>
             <p class="desk-status-line reveal"><span class="status-dot live" role="img" aria-label="Live"></span> Live · v0.1.0 · signed updates, unsigned installers</p>
@@ -596,7 +766,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
       <div class="container">
         <div class="skills-grid">
           <div class="skills-copy">
-            <p class="section-label reveal"><span>05</span> SoraSkills</p>
+            <p class="section-label reveal"><span>06</span> SoraSkills</p>
             <h2 class="section-title reveal" id="skills-title"><span class="title-line">Portable skills,</span> <em>ready to hand off.</em></h2>
             <p class="section-lede reveal">SoraSkills is the framework-agnostic side of SoraPlatform: compact, reusable skill packages that travel between agent tools. They are published on Agensi, so they work with any agent that loads the <code>SKILL.md</code> format — not just SoraAgent.</p>
             <p class="skills-status reveal"><span class="live-dot" aria-hidden="true"></span> Live on Agensi · 2 skills · one free, one paid</p>
@@ -645,7 +815,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
     <section class="section development" id="in-development" aria-labelledby="development-title">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-label"><span>06</span> In development</p>
+          <p class="section-label"><span>07</span> In development</p>
           <h2 class="section-title" id="development-title"><span class="title-line">The rest of the</span> <em>platform.</em></h2>
           <p class="section-lede">Seven products are taking shape. They will ship when they are ready — with the same rules: open source, no telemetry, and local control.</p>
         </div>
@@ -732,7 +902,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
     <section class="section section-dark contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="section-head reveal">
-          <p class="section-label light"><span>07</span> Contact</p>
+          <p class="section-label light"><span>08</span> Contact</p>
           <h2 class="section-title light" id="contact-title"><span class="title-line">Say hello to</span> <em>Mochi-Sora.</em></h2>
           <p class="section-lede light">The SoraPlatform Discord is the fastest way to reach the community and me. Code and releases live on GitHub; framework-agnostic skills live on Agensi.</p>
         </div>
@@ -798,6 +968,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#roadmap">Roadmap</a>
+        <a href="#benchmarks">Benchmarks</a>
         <a href="#purpose">Purpose</a>
         <a href="#soraagent">SoraAgent</a>
         <a href="#soradesk">SoraDesk</a>
@@ -816,6 +987,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
     <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
   </button>
 
+  <script src="assets/js/scoreboard.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
