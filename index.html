@@ -374,7 +374,7 @@
         <div class="section-head reveal">
           <p class="section-label"><span>02</span> Benchmarks</p>
           <h2 class="section-title" id="bench-title"><span class="title-line">Measured,</span> <em>not claimed.</em></h2>
-          <p class="section-lede">Every SoraAgent release is scored by the same seven-suite benchmark. These numbers load from the public scoreboard, so they move as the engine does.</p>
+          <p class="section-lede">Every SoraAgent release is scored by the same eight-suite benchmark. These numbers load from the public scoreboard, so they move as the engine does.</p>
         </div>
 
         <div class="bench-grid">
@@ -385,15 +385,15 @@
             </div>
 
             <div class="bench-score-row">
-              <div class="bench-dial" data-bench-dial style="--p:82.4" role="img" aria-label="Overall benchmark score 82.4 out of 100">
+              <div class="bench-dial" data-bench-dial style="--p:84.2" role="img" aria-label="Overall benchmark score 84.2 out of 100">
                 <div class="bench-dial-inner">
-                  <span class="bench-dial-num" data-bench="overall">82.4</span>
+                  <span class="bench-dial-num" data-bench="overall">84.2</span>
                   <span class="bench-dial-den">/ 100</span>
                 </div>
               </div>
               <div class="bench-verdict">
                 <p class="bench-grade">Grade <strong data-bench="grade">B</strong></p>
-                <p class="bench-verdict-note">Scored across seven suites: tokens, tools, memory, dreaming, speed, autonomy, caching.</p>
+                <p class="bench-verdict-note">Scored across eight suites: tokens, tools, memory, dreaming, speed, autonomy, caching, and files/specialists/memory modes.</p>
               </div>
             </div>
 
@@ -401,8 +401,8 @@
               <div><dt>Model</dt><dd data-bench="model">DeepSeek V4.1 Flash (deepseek-flash)</dd></div>
               <div><dt>Mode</dt><dd data-bench="mode">live OpenAI-compatible API</dd></div>
               <div><dt>Scored runs</dt><dd data-bench="runs">62</dd></div>
-              <div><dt>Run duration</dt><dd data-bench="duration">290.92 s</dd></div>
-              <div><dt>Updated</dt><dd><time data-bench="updated" datetime="2026-11-12T12:27:38Z">12 Nov 2026 · 12:27 UTC</time></dd></div>
+              <div><dt>Run duration</dt><dd data-bench="duration">296.70 s</dd></div>
+              <div><dt>Updated</dt><dd><time data-bench="updated" datetime="2026-11-16T13:03:50Z">16 Nov 2026 · 13:03 UTC</time></dd></div>
             </dl>
           </aside>
 
@@ -412,9 +412,9 @@
               <li class="bench-suite" data-suite="Token usage">
                 <div class="bench-suite-head">
                   <span class="bench-suite-name">Token usage</span>
-                  <span class="bench-suite-meta"><span data-suite-runs>8 runs</span><strong data-suite-score>69.7</strong></span>
+                  <span class="bench-suite-meta"><span data-suite-runs>8 runs</span><strong data-suite-score>69.3</strong></span>
                 </div>
-                <div class="bench-suite-bar" role="progressbar" aria-label="Token usage score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="69.7" data-suite-bar><span style="width:69.7%"></span></div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Token usage score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="69.3" data-suite-bar><span style="width:69.3%"></span></div>
               </li>
               <li class="bench-suite" data-suite="Tool-use accuracy">
                 <div class="bench-suite-head">
@@ -426,9 +426,9 @@
               <li class="bench-suite" data-suite="Memory retention">
                 <div class="bench-suite-head">
                   <span class="bench-suite-name">Memory retention</span>
-                  <span class="bench-suite-meta"><span data-suite-runs>14 runs</span><strong data-suite-score>94.8</strong></span>
+                  <span class="bench-suite-meta"><span data-suite-runs>14 runs</span><strong data-suite-score>93.6</strong></span>
                 </div>
-                <div class="bench-suite-bar" role="progressbar" aria-label="Memory retention score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="94.8" data-suite-bar><span style="width:94.8%"></span></div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Memory retention score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="93.6" data-suite-bar><span style="width:93.6%"></span></div>
               </li>
               <li class="bench-suite" data-suite="Dreaming mechanism">
                 <div class="bench-suite-head">
@@ -440,23 +440,30 @@
               <li class="bench-suite" data-suite="Response speed">
                 <div class="bench-suite-head">
                   <span class="bench-suite-name">Response speed</span>
-                  <span class="bench-suite-meta"><span data-suite-runs>6 runs</span><strong data-suite-score>74.0</strong></span>
+                  <span class="bench-suite-meta"><span data-suite-runs>6 runs</span><strong data-suite-score>74.5</strong></span>
                 </div>
                 <div class="bench-suite-bar" role="progressbar" aria-label="Response speed score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="74" data-suite-bar><span style="width:74%"></span></div>
               </li>
               <li class="bench-suite" data-suite="Autonomous task completion">
                 <div class="bench-suite-head">
                   <span class="bench-suite-name">Autonomous task completion</span>
-                  <span class="bench-suite-meta"><span data-suite-runs>12 runs</span><strong data-suite-score>62.9</strong></span>
+                  <span class="bench-suite-meta"><span data-suite-runs>12 runs</span><strong data-suite-score>60.8</strong></span>
                 </div>
-                <div class="bench-suite-bar" role="progressbar" aria-label="Autonomous task completion score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62.9" data-suite-bar><span style="width:62.9%"></span></div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Autonomous task completion score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60.8" data-suite-bar><span style="width:60.8%"></span></div>
               </li>
               <li class="bench-suite" data-suite="Prompt caching">
                 <div class="bench-suite-head">
                   <span class="bench-suite-name">Prompt caching</span>
-                  <span class="bench-suite-meta"><span data-suite-runs>2 runs</span><strong data-suite-score>84.3</strong></span>
+                  <span class="bench-suite-meta"><span data-suite-runs>2 runs</span><strong data-suite-score>84.5</strong></span>
                 </div>
-                <div class="bench-suite-bar" role="progressbar" aria-label="Prompt caching score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="84.3" data-suite-bar><span style="width:84.3%"></span></div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Prompt caching score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="84.5" data-suite-bar><span style="width:84.5%"></span></div>
+              </li>
+              <li class="bench-suite" data-suite="Files, specialists & memory modes">
+                <div class="bench-suite-head">
+                  <span class="bench-suite-name">Files, specialists &amp; memory modes</span>
+                  <span class="bench-suite-meta"><span data-suite-runs>—</span><strong data-suite-score>100.0</strong></span>
+                </div>
+                <div class="bench-suite-bar" role="progressbar" aria-label="Files, specialists and memory modes score" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" data-suite-bar><span style="width:100%"></span></div>
               </li>
             </ul>
           </div>
@@ -472,11 +479,11 @@
             </div>
           </article>
           <article class="bench-metric reveal" data-metric="End-to-end answer accuracy">
-            <p class="bench-metric-value" data-metric-value>100.0%</p>
+            <p class="bench-metric-value" data-metric-value>92.9%</p>
             <h3 class="bench-metric-name">Answer accuracy</h3>
             <div class="bench-metric-foot">
-              <span class="bench-metric-bar" aria-hidden="true"><i style="width:100%"></i></span>
-              <span class="bench-metric-score"><strong data-metric-score>100.0</strong> /100</span>
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:97.7%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>97.7</strong> /100</span>
             </div>
           </article>
           <article class="bench-metric reveal" data-metric="Retrieval hit rate">
@@ -504,7 +511,7 @@
             </div>
           </article>
           <article class="bench-metric reveal" data-metric="Effective tokens per run (after prefix reuse)">
-            <p class="bench-metric-value" data-metric-value>1,746 tokens</p>
+            <p class="bench-metric-value" data-metric-value>1,643 tokens</p>
             <h3 class="bench-metric-name">Effective tokens per run<span class="bench-metric-note">lower is better</span></h3>
             <div class="bench-metric-foot">
               <span class="bench-metric-bar" aria-hidden="true"><i style="width:100%"></i></span>
@@ -512,19 +519,28 @@
             </div>
           </article>
           <article class="bench-metric reveal" data-metric="Total tokens per run">
-            <p class="bench-metric-value" data-metric-value>8,194 tokens</p>
+            <p class="bench-metric-value" data-metric-value>8,283 tokens</p>
             <h3 class="bench-metric-name">Total tokens per run<span class="bench-metric-note">lower is better</span></h3>
             <div class="bench-metric-foot">
-              <span class="bench-metric-bar" aria-hidden="true"><i style="width:67.1%"></i></span>
-              <span class="bench-metric-score"><strong data-metric-score>67.1</strong> /100</span>
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:66.4%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>66.4</strong> /100</span>
             </div>
           </article>
           <article class="bench-metric reveal" data-metric="End-to-end latency (p95)">
-            <p class="bench-metric-value" data-metric-value>7.09 s</p>
+            <p class="bench-metric-value" data-metric-value>6.91 s</p>
             <h3 class="bench-metric-name">End-to-end latency (p95)<span class="bench-metric-note">lower is better</span></h3>
             <div class="bench-metric-foot">
-              <span class="bench-metric-bar" aria-hidden="true"><i style="width:42.3%"></i></span>
-              <span class="bench-metric-score"><strong data-metric-score>42.3</strong> /100</span>
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:43.4%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>43.4</strong> /100</span>
+            </div>
+          </article>
+
+          <article class="bench-metric reveal" data-metric="Edge-case checks passed">
+            <p class="bench-metric-value" data-metric-value>100.0</p>
+            <h3 class="bench-metric-name">Edge-case checks<span class="bench-metric-note">34/34</span></h3>
+            <div class="bench-metric-foot">
+              <span class="bench-metric-bar" aria-hidden="true"><i style="width:100%"></i></span>
+              <span class="bench-metric-score"><strong data-metric-score>100.0</strong> /100</span>
             </div>
           </article>
         </div>
@@ -600,11 +616,19 @@
             </article>
             <article class="feature">
               <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg></span>
-              <div><h3>Lazy tool discovery</h3><p>Only <code>find_tools</code> and <code>memory_recall</code> are visible at the start; the rest load on demand, keeping prompts small and tool lists bounded.</p></div>
+              <div><h3>Lazy tool discovery</h3><p>The tool loop starts small; chat surfaces also expose <code>find_delegates</code> and <code>delegate_to_agent</code> so the orchestrator can route specialist work without bloating the prompt.</p></div>
             </article>
             <article class="feature">
               <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-cpu"></use></svg></span>
-              <div><h3>Local memory &amp; identity</h3><p>File-backed <code>USER.md</code> and <code>SOUL.md</code>, plus optional CortexDB recall with a memory firewall.</p></div>
+              <div><h3>Unified memory &amp; identity</h3><p>File-backed <code>USER.md</code> and <code>SOUL.md</code>, unified long-term recall with a memory firewall, and daily-only consolidation when CortexDB is unavailable.</p></div>
+            </article>
+            <article class="feature">
+              <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-paperclip"></use></svg></span>
+              <div><h3>Files into Markdown</h3><p>PDF, DOCX/PPTX/XLSX, ODF, EPUB, EML, RTF, HTML, CSV, archives, and images become model-readable Markdown — no multimodal model required.</p></div>
+            </article>
+            <article class="feature">
+              <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg></span>
+              <div><h3>Persistent specialists</h3><p>User-created delegation agents with their own prompt, model, scoped tools, workspace, and daily stores. Opt-in provisional creation stays off by default.</p></div>
             </article>
           </div>
 
@@ -642,7 +666,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
               </div>
             </div>
             <div class="install-meta">
-              <span>v0.1.5</span><span>Python 3.9+</span><span>AGPL-3.0-only</span><span>stdlib-only core</span>
+              <span>v0.2.0</span><span>Python 3.9+</span><span>AGPL-3.0-only</span><span>stdlib-only core</span>
             </div>
           </div>
         </div>
