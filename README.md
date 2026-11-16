@@ -52,6 +52,7 @@ SoraOfficialWebsite/
 │   └── img/                   # Avatar, favicon, social preview
 ├── documents/                 # Local copies of the official documents
 │   ├── SoraAgent-README.md
+│   ├── SoraAgent-CHANGELOG.md
 │   ├── SoraAgent-LICENSE.txt
 │   ├── SoraAgent-pyproject.toml
 │   ├── SoraAgent-install.sh
