@@ -700,10 +700,10 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
           <div class="desk-copy">
             <p class="section-label light reveal"><span>05</span> SoraDesk</p>
             <h2 class="section-title light reveal" id="desk-title"><span class="title-line">SoraAgent,</span> <em>on your desktop.</em></h2>
-            <p class="section-lede light reveal">A native Tauri v2 client for the SoraAgent runtime — chat, sessions, calendar, memories, and settings over local, SSH, or direct-IP connections.</p>
-            <p class="desk-status-line reveal"><span class="status-dot live" role="img" aria-label="Live"></span> Live · v0.1.1 · signed updates, unsigned installers</p>
+            <p class="section-lede light reveal">A native Tauri v2 client for the SoraAgent runtime — chat, sessions, specialists, calendar, memories, and settings over local, SSH, or direct-IP connections.</p>
+            <p class="desk-status-line reveal"><span class="status-dot live" role="img" aria-label="Live"></span> Live · v0.2.0 · signed updates, unsigned installers</p>
             <div class="desk-actions reveal">
-              <a class="btn btn-light btn-small" href="https://github.com/Mochi-Sora/SoraDesk/releases/latest" target="_blank" rel="noopener noreferrer">Download v0.1.1 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
+              <a class="btn btn-light btn-small" href="https://github.com/Mochi-Sora/SoraDesk/releases/latest" target="_blank" rel="noopener noreferrer">Download v0.2.0 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
               <a class="text-link light" href="https://github.com/Mochi-Sora/SoraDesk" target="_blank" rel="noopener noreferrer">View repository <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
               <a class="text-link light" href="documents/SoraDesk-README.md">Read the README <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
               <a class="text-link light" href="documents/SoraDesk-protocol.md">Protocol v1 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></a>
@@ -711,7 +711,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
           </div>
 
           <div class="desk-visual reveal">
-            <div class="desk-window" role="img" aria-label="Preview of the SoraDesk app: a sidebar with Chat, Sessions, Calendar, Memories, and Settings, and a chat view with a streamed reply and a tool approval request.">
+            <div class="desk-window" role="img" aria-label="Preview of the SoraDesk app: a sidebar with Chat, Sessions, Specialists, Calendar, Memories, and Settings, and a chat view with a streamed reply and a tool approval request.">
               <div class="desk-titlebar">
                 <span class="desk-dots" aria-hidden="true"><i></i><i></i><i></i></span>
                 <span class="desk-title">SoraDesk</span>
@@ -723,11 +723,12 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
                   <nav class="desk-nav">
                     <span class="is-active">Chat</span>
                     <span>Sessions</span>
+                    <span>Specialists</span>
                     <span>Calendar</span>
                     <span>Memories</span>
                     <span>Settings</span>
                   </nav>
-                  <div class="desk-sidebar-foot">v0.1.1 · AGPL-3.0</div>
+                  <div class="desk-sidebar-foot">v0.2.0 · AGPL-3.0</div>
                 </aside>
                 <div class="desk-main" aria-hidden="true">
                   <div class="desk-chat-head"><strong>Trip planning</strong><span>1 session</span></div>
@@ -767,6 +768,10 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
             <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg></span>
             <div><h3>Agent state, not a duplicate</h3><p>Sessions, calendar, and memories read SoraAgent’s own store. Settings manages profiles, pairing, the local bridge, and updates.</p></div>
           </article>
+          <article class="feature">
+            <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg></span>
+            <div><h3>Specialists, managed</h3><p>Inspect persistent delegation agents, pause or resume them, promote provisional specialists, or delete them — from the desktop.</p></div>
+          </article>
         </div>
 
         <div class="flagship-facts desk-facts reveal">
@@ -780,7 +785,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
           </div>
           <div class="flagship-fact">
             <h3>Status</h3>
-            <p>v0.1.1, released against the frozen v1 protocol. Updater artifacts are signed; the macOS and Windows installers are not yet code-signed, so first launch may show a Gatekeeper or SmartScreen warning.</p>
+            <p>v0.2.0, released against the frozen v1 protocol. Updater artifacts are signed; the macOS and Windows installers are not yet code-signed, so first launch may show a Gatekeeper or SmartScreen warning.</p>
           </div>
         </div>
       </div>

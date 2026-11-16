@@ -102,8 +102,14 @@ ISO-8601 strings, and `memory.stats` carries the bytes/counts from `memory.docto
 | `sessions.history` | `session_id`, `limit?: number` (default 100), `before?: string` (opaque cursor) | `{session_id, messages: [HistoryMessage], next_cursor?}` |
 | `memory.stats` | — | `MemoryStats` (§5) |
 | `calendar.list` | `limit?: number` (default 200, capped at 500) | `{items: [CalendarItem], enabled, error?}` |
+| `specialists.list` | — | `{specialists: [SpecialistSummary], store: string}` (§3.4a) |
+| `specialists.set_status` | `id: string`, `status: "active" \| "paused"` | `SpecialistSummary` |
+| `specialists.delete` | `id: string` | `{deleted: string}` |
+| `specialists.promote` | `id: string` | `SpecialistSummary` (provisional flag cleared) |
 | `approve` | `approval_id` | `{approval_id, approved: true}` |
 | `deny` | `approval_id`, `reason?: string` | `{approval_id, approved: false}` |
+| `events.subscribe` | — | `{subscribed: true}` (local observer extension, §3.5) |
+| `events.unsubscribe` | — | `{subscribed: false}` |
 | `ping` | `ts` (client epoch ms) | `{ts, server_time}` |
 
 Rules:
@@ -282,12 +288,62 @@ Rules:
   completed ones). The client currently exposes no date-range filter.
 - `kind` is `event` or `todo`; `importance` is `important`, `balanced`, or `not important`.
 
+### 3.4a `specialists.*`
+
+SoraDesk exposes SoraAgent's persistent specialists (delegation agents) for
+inspection and management. Creation stays in the CLI (`sora delegate create`)
+or is opt-in through the main agent; the bridge does not create agents.
+
+```json
+{
+  "specialists": [
+    {
+      "id": "research-analyst",
+      "name": "Research Analyst",
+      "description": "Finds and cites public sources",
+      "when_to_use": "research, citations, literature",
+      "status": "active",
+      "provider": "",
+      "model": "",
+      "tools": ["research"],
+      "created_by": "user",
+      "provisional": false,
+      "version": 1
+    }
+  ],
+  "store": "/home/user/.sora_agent/delegations"
+}
+```
+
+`set_status` pauses/resumes an agent without deleting it. `delete` removes the
+manifest but keeps the workspace unless the CLI is used with `--workspace`.
+`promote` clears the provisional marker on an auto-created specialist.
+
+### 3.5 Local event observation (`events.subscribe`)
+
+SoraAvatar uses a read-only extension to mirror agent activity without owning a chat
+session. A trusted loopback client may call `events.subscribe`; from then on the bridge
+fans out every turn event (`message`, `delta`, `reasoning_delta`, `reasoning_end`, `tool`,
+`file_edit`, `progress`, `approval`, `turn.end`) to it as well as to the originating
+client. `events.unsubscribe` stops the fan-out, and disconnecting does so implicitly.
+
+- The extension is **local-only**: clients that are not trusted loopback connections get
+  `unauthorized`. It does not expose events to paired remote devices.
+- The observer receives events for every session, not just its own. It must treat unknown
+  event types as ignorable, exactly like a normal client.
+- Subscription does not grant permission to answer approvals or interrupt turns; the
+  originating client remains the owner of the turn. The observer is an audience.
+- SoraDesk clients ignore this extension; it is additive and does not change existing
+  event meaning.
+
 ## 4. Events (server → client)
 
-Events mirror SoraAgent's channel outbound hooks (`send`, `send_delta`,
-`send_reasoning_delta`, `send_reasoning_end`, `send_file_edit_events`, tool/progress
-callbacks, approvals). The bridge translates `ChatHandler`'s cumulative stream snapshots
-into the incremental `delta` frames below.
+Events mirror SoraAgent's channel outbound hooks and tool/progress callbacks. The bridge
+runs the same `ChatHandler` as SoraAgent's channels and translates each turn into the
+events below. When streaming is enabled, the bridge diffs the handler's cumulative
+snapshots into `delta` events and then sends one authoritative `message` per segment.
+When streaming is disabled or the provider cannot stream, the turn produces a single
+complete `message` event and no `delta` frames.
 
 | `type` | payload | notes |
 |---|---|---|
@@ -439,6 +495,16 @@ WebSocket close codes: **4400** protocol error · **4401** unauthorized/revoked 
   advertises `features: []` (no steering), replaces `cron.list` with read-only
   `calendar.list`, and reports the SoraAgent memory doctor shape. No envelope or event meaning
   changed, so `"v"` stays `1`.
+- **v1.5 (additive, 2026-11-10):** `events.subscribe` / `events.unsubscribe`, a loopback-only
+  read-only observer channel for SoraAvatar. Existing requests and events are unchanged;
+  `"v"` stays `1`.
+- **Bridge adaptation (2026-11-10):** the bridge now runs against the current SoraAgent
+  `ChatHandler` API. The protocol already permits non-streaming turns, so existing clients
+  and `"v"` are unchanged.
+- **Streaming restoration (2026-11-10):** SoraAgent's provider, runner, and `ChatHandler`
+  streaming APIs are restored, and the bridge emits `delta` events again when the bridge
+  config and SoraAgent feature settings both allow it. Non-streaming turns remain valid and
+  produce one complete `message`. `"v"` stays `1`.
 
 ## 10. Implementation status (informative)
 
@@ -447,5 +513,6 @@ WebSocket close codes: **4400** protocol error · **4401** unauthorized/revoked 
   server used by the Node smoke suite.
 - **Server:** [`bridge/sora_desktop/`](../bridge/sora_desktop/) implements v1 through v1.3
   plus read-only `calendar.list` and the SoraAgent `memory.stats` shape. It runs SoraAgent's
-  own `ChatHandler`, so approvals, history, tools, and streaming come from the same runtime
-  the CLI uses. `chat.inject` is intentionally unsupported.
+  own `ChatHandler`, so approvals, history, and tools come from the same runtime the CLI
+  uses. The bridge emits `delta` frames when streaming is enabled and one complete
+  `message` per segment otherwise; `chat.inject` is intentionally unsupported.
