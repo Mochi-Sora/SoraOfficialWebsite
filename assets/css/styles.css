@@ -3710,3 +3710,21 @@ body.nav-open {
     width: 100%;
   }
 }
+
+.principle-card .feature-icon {
+  margin-bottom: 8px;
+}
+
+.principle-card .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 700px) {
+  .principle-card .text-link {
+    font-size: 0.78rem;
+  }
+}

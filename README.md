@@ -1,11 +1,50 @@
-# Mochi-Sora — Official Website
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Mochi-Sora/SoraOfficialWebsite/main/assets/img/mochi-sora-avatar.png" alt="Mochi-Sora" width="112">
+</p>
 
-The official website of **Tam Kuan Hou** (譚君浩 / Marco Tam), known online as
-**Mochi-Sora** — independent software developer and creator of
-**SoraPlatform**.
+<h1 align="center">Mochi-Sora — Official Website</h1>
 
-The site is a static, no-build-step project: plain HTML, CSS, and JavaScript.
-It can be served from any static host or opened through a local HTTP server.
+<p align="center"><strong>The home of Tam Kuan Hou, SoraPlatform, and the products built in the open.</strong></p>
+
+<p align="center">
+  <a href="https://mochi-sora.github.io/SoraOfficialWebsite/"><img src="https://img.shields.io/badge/live-mochi--sora.github.io-1f6feb" alt="Live site"></a>
+  <a href="https://github.com/Mochi-Sora/SoraOfficialWebsite"><img src="https://img.shields.io/badge/static-HTML%20%7C%20CSS%20%7C%20JS-2ea44f" alt="Static HTML, CSS, and JavaScript"></a>
+  <a href="https://github.com/Mochi-Sora/SoraAgent-Benchmarks"><img src="https://img.shields.io/badge/live%20benchmark-85.1%2F100-6f42c1" alt="Live benchmark 85.1/100"></a>
+</p>
+
+<p align="center">
+  <a href="https://discord.gg/s8W6JfBSMH">Discord</a> ·
+  <a href="https://github.com/Mochi-Sora">GitHub</a> ·
+  <a href="https://www.agensi.io/creators/mochi-sora">Agensi</a> ·
+  <a href="https://github.com/Mochi-Sora/SoraAgent">SoraAgent</a> ·
+  <a href="https://github.com/Mochi-Sora/SoraDesk">SoraDesk</a>
+</p>
+
+This is the official website of **Tam Kuan Hou** (譚君浩 / Marco Tam), known online as **Mochi-Sora** — an independent software developer and the creator of **SoraPlatform**. It is also the public front door for SoraAgent, SoraDesk, SoraSkills, the product roadmap, and the live benchmark.
+
+The site is deliberately **static**: plain HTML, CSS, and JavaScript with no build step, no framework, and no analytics. It can be served from GitHub Pages or any static host.
+
+## What is on the site
+
+- **Start here** — three simple ways in: the desktop app, the agent, or a portable skill.
+- **SoraDesk** — the native desktop client, download buttons, and a product preview.
+- **SoraAgent** — what the engine does, the installer, and links to the README.
+- **SoraSkills** — the two live Agensi skills and direct listings.
+- **Benchmarks** — the public SoraAgent scoreboard, loaded from the benchmark repository on page load.
+- **Roadmap** — all ten SoraPlatform products, honestly marked live or in development.
+- **In development**, **Purpose**, and **Contact** — what is next, why it exists, and where to find the community.
+
+## Start here
+
+| You want to… | Go to |
+| --- | --- |
+| View the live site | <https://mochi-sora.github.io/SoraOfficialWebsite/> |
+| Preview locally | [Preview](#preview-locally) |
+| Change page copy or sections | [`index.html`](index.html) |
+| Change styling | [`assets/css/styles.css`](assets/css/styles.css) |
+| Update the benchmark snapshot | [`assets/js/scoreboard.js`](assets/js/scoreboard.js) and the SoraAgent-Benchmarks repo |
+| Update product documents | [`documents/`](documents/) |
+| Join the community | [Discord](https://discord.gg/s8W6JfBSMH) |
 
 ## Preview locally
 
@@ -17,7 +56,7 @@ python3 -m http.server 8765
 
 Then open <http://127.0.0.1:8765/>.
 
-Any equivalent static server works, for example:
+Any static server works:
 
 ```bash
 npx serve .
@@ -25,128 +64,41 @@ npx serve .
 php -S 127.0.0.1:8765
 ```
 
-Opening `index.html` directly from the filesystem also works, though a local
-server is recommended so fonts and relative paths behave consistently.
+Opening `index.html` directly also works, but a local server is recommended so fonts and relative paths behave consistently.
 
 ## Deploy
 
-Upload the entire folder to any static host — GitHub Pages, Netlify, Cloudflare
-Pages, Vercel, or a plain web server. There is no build command and no
-dependency installation step.
+Upload the entire folder to any static host — GitHub Pages, Netlify, Cloudflare Pages, Vercel, or a plain web server. There is no build command and no dependency installation.
 
-For GitHub Pages, publish the repository root (or this folder) and keep
-`index.html` and `404.html` at the top level. The `404.html` page uses the same
-relative asset paths as the main site.
+For GitHub Pages, publish the repository root and keep `index.html` and `404.html` at the top level. The 404 page uses the same relative assets as the main site.
 
 ## Structure
 
 ```text
 SoraOfficialWebsite/
-├── index.html                 # The single-page site
-├── 404.html                   # Not-found page
+├── index.html                 # the single-page site
+├── 404.html                   # not-found page
 ├── assets/
-│   ├── css/styles.css         # All styling and responsive rules
-│   ├── js/main.js             # Navigation, tabs, copy, reveal
-│   ├── js/scoreboard.js       # Fetches and renders the live benchmark data
-│   ├── fonts/                 # Self-hosted Sora, Inter, Instrument Serif
-│   └── img/                   # Avatar, favicon, social preview
-├── documents/                 # Local copies of the official documents
-│   ├── SoraAgent-README.md
-│   ├── SoraAgent-CHANGELOG.md
-│   ├── SoraAgent-LICENSE.txt
-│   ├── SoraAgent-pyproject.toml
-│   ├── SoraAgent-install.sh
-│   ├── SoraAgent-install.ps1
-│   ├── SoraDesk-README.md
-│   ├── SoraDesk-LICENSE.txt
-│   ├── SoraDesk-protocol.md
-│   ├── SoraDesk-connections.md
-│   └── SoraPlatform-Roadmap.md
+│   ├── css/styles.css         # all styling and responsive rules
+│   ├── js/main.js             # navigation, tabs, copy, reveal
+│   ├── js/scoreboard.js       # fetches and renders the live benchmark data
+│   ├── fonts/                 # self-hosted Sora, Inter, Instrument Serif
+│   └── img/                   # avatar, favicon, social preview
+├── documents/                 # mirrors of official product documents
 └── README.md
 ```
 
-## Content sources
+## Benchmark data
 
-- **Profile and public identity** — the
-  [Mochi-Sora GitHub profile](https://github.com/Mochi-Sora) and the
-  [Agensi creator page](https://www.agensi.io/creators/mochi-sora).
-- **SoraAgent** — the official
-  [README](https://github.com/Mochi-Sora/SoraAgent/blob/main/README.md),
-  [LICENSE](https://github.com/Mochi-Sora/SoraAgent/blob/main/LICENSE), and
-  [pyproject.toml](https://github.com/Mochi-Sora/SoraAgent/blob/main/pyproject.toml).
-- **SoraDesk** — the official
-  [README](https://github.com/Mochi-Sora/SoraDesk/blob/main/README.md),
-  [protocol](https://github.com/Mochi-Sora/SoraDesk/blob/main/docs/protocol.md),
-  [connection modes](https://github.com/Mochi-Sora/SoraDesk/blob/main/docs/connections.md),
-  and [LICENSE](https://github.com/Mochi-Sora/SoraDesk/blob/main/LICENSE).
-- **SoraPlatform roadmap** — the official SoraPlatform roadmap document,
-  covering all ten products and their current status.
-- **Benchmarks** — the public
-  [SoraAgent-Benchmarks](https://github.com/Mochi-Sora/SoraAgent-Benchmarks)
-  repository; its live scoreboard drives the Benchmarks section.
-- **SoraSkills** — the [Agensi creator page](https://www.agensi.io/creators/mochi-sora)
-  and the two live skill listings:
-  [State First Backend](https://www.agensi.io/skills/state-first-backend) and
-  [context handoff](https://www.agensi.io/skills/context-handoff).
-- **Community** — the [SoraPlatform Discord server](https://discord.gg/s8W6JfBSMH).
+The Benchmarks section ships with a snapshot of the latest run, then [`assets/js/scoreboard.js`](assets/js/scoreboard.js) fetches the public [SoraAgent live scoreboard](https://github.com/Mochi-Sora/SoraAgent-Benchmarks/blob/main/SoraAgent-live-scoreboard.md) on load and replaces the snapshot values in place. If the fetch fails, the snapshot stays and the status label switches to **Snapshot**.
 
-The local files in `documents/` are provided for convenience. The versions in
-the GitHub repositories are canonical.
-
-## Scope
-
-The single page is organised into nine sections: the hero profile card, the
-ten-product roadmap, the live benchmark scoreboard, the purpose of SoraPlatform,
-SoraAgent, SoraDesk, SoraSkills, the products still in development, and contact
-information. The site covers all ten SoraPlatform products — SoraAgent, SoraDesk,
-SoraSkills, SoraPlugins, SoraOS, SoraOffice, SoraCreate, SoraBrowser, SoraMusic,
-and SoraSocials. MasonAgent appears only as historical context in the profile
-copy; there are no separate archive cards.
-
-SoraAgent, SoraDesk, and SoraSkills are marked live. SoraDesk is live at v0.1.1:
-the Tauri v2 client, the local Python bridge, and signed updater packaging are
-implemented against the frozen v1 protocol. The macOS and Windows installers are
-unsigned for now; the updater artifacts are signed. SoraSkills is live on Agensi
-with two skills: State First Backend and context handoff. The remaining seven
-products are marked in development.
-
-The unrelated `undertale-game-for-no-reason-at-all` repository is intentionally
-excluded.
+To update it, publish a new `SoraAgent-live-scoreboard.md` in [SoraAgent-Benchmarks](https://github.com/Mochi-Sora/SoraAgent-Benchmarks). No website deploy is needed for the numbers; the next page load picks them up. The request is a plain GET to GitHub's raw CDN — no cookies, no analytics, and no other runtime network calls.
 
 ## Notes
 
-- The site is responsive down to small mobile widths and respects
-  `prefers-reduced-motion`.
-- The install tabs, copy buttons, mobile navigation, and scroll-reveal effects
-  are implemented in `assets/js/main.js`.
-- The page is intentionally consolidated: the hero introduces the person and links
-  to his main profiles; the roadmap is the single product list; the benchmark
-  section shows the current live score; the purpose section states the mission;
-  SoraAgent, SoraDesk, and SoraSkills get the detail; the in-development section
-  covers the remaining products; and contact links close the page. External links
-  also live in the header, the hero card, and the footer.
-- The Benchmarks section ships with a snapshot of the latest run, then
-  `assets/js/scoreboard.js` fetches
-  `SoraAgent-live-scoreboard.md` from the public SoraAgent-Benchmarks repository
-  on load and replaces the snapshot values in place. If the fetch fails, the
-  snapshot stays and the status label switches to "Snapshot". Scores come from
-  the benchmark repository; the site does not compute or edit them.
-- Updating the scoreboard requires no site deploy: push a new
-  `SoraAgent-live-scoreboard.md` to SoraAgent-Benchmarks and the next page load
-  picks it up. The fetch is a plain GET to GitHub's raw CDN — no cookies, no
-  analytics, and no other runtime network calls.
-- The SoraSkills section lists the two live Agensi skills — State First Backend
-  and context handoff — with direct links to each listing and the creator profile.
-- The hero card is a compact profile card: avatar, name, and direct GitHub,
-  Agensi, and Discord links.
-- The SoraDesk section includes an HTML/CSS preview of the app shell rather than a
-  screenshot, so it stays sharp at any size and needs no image asset.
-- Local document mirrors are linked from the relevant product sections. The
-  GitHub versions are canonical.
-- Fonts are self-hosted under `assets/fonts/`; Sora, Inter, and Instrument Serif
-  are licensed under the SIL Open Font License.
-- The social preview image is at `assets/img/og-cover.png` (1200 × 630). After
-  deploying, replace the relative `og:image` and `twitter:image` paths in
-  `index.html` with absolute URLs for the most reliable link previews.
-- SoraAgent and SoraDesk are licensed **AGPL-3.0-only**. Website copy and
-  branding are © 2026 Tam Kuan Hou (譚君浩 / Marco Tam).
+- Responsive down to small mobile widths and respects `prefers-reduced-motion`.
+- The install tabs, copy buttons, mobile navigation, and scroll-reveal effects live in [`assets/js/main.js`](assets/js/main.js).
+- Local documents under [`documents/`](documents/) are convenience mirrors. The GitHub repository versions are canonical.
+- Fonts are self-hosted under `assets/fonts/`; Sora, Inter, and Instrument Serif are licensed under the SIL Open Font License.
+- The social preview image is `assets/img/og-cover.png` (1200 × 630). For the most reliable previews after deployment, use absolute URLs for `og:image` and `twitter:image`.
+- SoraAgent and SoraDesk are licensed **AGPL-3.0-only**. Website copy and branding are © 2026 Tam Kuan Hou (譚君浩 / Marco Tam).
