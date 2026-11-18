@@ -101,4 +101,4 @@ To update it, publish a new `SoraAgent-live-scoreboard.md` in [SoraAgent-Benchma
 - Local documents under [`documents/`](documents/) are convenience mirrors. The GitHub repository versions are canonical.
 - Fonts are self-hosted under `assets/fonts/`; Sora, Inter, and Instrument Serif are licensed under the SIL Open Font License.
 - The social preview image is `assets/img/og-cover.png` (1200 × 630). For the most reliable previews after deployment, use absolute URLs for `og:image` and `twitter:image`.
-- SoraAgent and SoraDesk are licensed **AGPL-3.0-only**. Website copy and branding are © 2026 Tam Kuan Hou (譚君浩 / Marco Tam).
+- SoraAgent and SoraDesk are licensed **AGPL-3.0-only**. The SoraAgent benchmark harness is **MIT-licensed**. Website copy and branding are © 2026 Tam Kuan Hou (譚君浩 / Marco Tam).
