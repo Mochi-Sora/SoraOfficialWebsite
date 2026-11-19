@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://mochi-sora.github.io/SoraOfficialWebsite/"><img src="https://img.shields.io/badge/live-mochi--sora.github.io-1f6feb" alt="Live site"></a>
   <a href="https://github.com/Mochi-Sora/SoraOfficialWebsite"><img src="https://img.shields.io/badge/static-HTML%20%7C%20CSS%20%7C%20JS-2ea44f" alt="Static HTML, CSS, and JavaScript"></a>
-  <a href="https://github.com/Mochi-Sora/SoraAgent-Benchmarks"><img src="https://img.shields.io/badge/live%20benchmark-84.8%2F100-6f42c1" alt="Live benchmark 84.8/100"></a>
+  <a href="https://github.com/Mochi-Sora/SoraAgent-Benchmarks"><img src="https://img.shields.io/badge/live%20benchmark-86.3%2F100-6f42c1" alt="Live benchmark 86.3/100"></a>
 </p>
 
 <p align="center">
