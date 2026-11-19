@@ -3728,3 +3728,12 @@ body.nav-open {
     font-size: 0.78rem;
   }
 }
+
+.install-note {
+  margin: 0;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(248, 240, 227, 0.1);
+  color: rgba(248, 240, 227, 0.62);
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
