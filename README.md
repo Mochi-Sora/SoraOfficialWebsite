@@ -42,7 +42,7 @@ The site is deliberately **static**: plain HTML, CSS, and JavaScript with no bui
 | Preview locally | [Preview](#preview-locally) |
 | Change page copy or sections | [`index.html`](index.html) |
 | Change styling | [`assets/css/styles.css`](assets/css/styles.css) |
-| Update the benchmark snapshot | [`assets/js/scoreboard.js`](assets/js/scoreboard.js) and the SoraAgent-Benchmarks repo |
+| Update the benchmark snapshot | [`index.html`](index.html) (snapshot values), [`assets/js/scoreboard.js`](assets/js/scoreboard.js) (fetch logic), and the SoraAgent-Benchmarks repo |
 | Update product documents | [`documents/`](documents/) |
 | Join the community | [Discord](https://discord.gg/s8W6JfBSMH) |
 
@@ -100,5 +100,5 @@ To update it, publish a new `SoraAgent-live-scoreboard.md` in [SoraAgent-Benchma
 - The install tabs, copy buttons, mobile navigation, and scroll-reveal effects live in [`assets/js/main.js`](assets/js/main.js).
 - Local documents under [`documents/`](documents/) are convenience mirrors. The GitHub repository versions are canonical.
 - Fonts are self-hosted under `assets/fonts/`; Sora, Inter, and Instrument Serif are licensed under the SIL Open Font License.
-- The social preview image is `assets/img/og-cover.png` (1200 × 630). For the most reliable previews after deployment, use absolute URLs for `og:image` and `twitter:image`.
+- The social preview image is `assets/img/og-cover.png` (1200 × 630). `og:image` and `twitter:image` use absolute URLs so previews work reliably after deployment.
 - SoraAgent and SoraDesk are licensed **AGPL-3.0-only**. The SoraAgent benchmark harness is **MIT-licensed**. Website copy and branding are © 2026 Tam Kuan Hou (譚君浩 / Marco Tam).

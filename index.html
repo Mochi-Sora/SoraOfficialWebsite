@@ -13,11 +13,11 @@
   <meta property="og:site_name" content="Mochi-Sora — Official Website">
   <meta property="og:title" content="Mochi-Sora — Tam Kuan Hou | SoraPlatform, SoraAgent, SoraDesk &amp; SoraSkills">
   <meta property="og:description" content="Open-source, independent software built against telemetry and bloat. Meet SoraPlatform, the SoraAgent engine, the SoraDesk desktop client, framework-agnostic SoraSkills on Agensi, and the live benchmark scoreboard.">
-  <meta property="og:image" content="assets/img/og-cover.png">
+  <meta property="og:image" content="https://mochi-sora.github.io/SoraOfficialWebsite/assets/img/og-cover.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mochi-Sora — Tam Kuan Hou">
   <meta name="twitter:description" content="Open-source, independent software built against telemetry and bloat. Creator of SoraPlatform, SoraAgent, SoraDesk, and SoraSkills — with every release scored in public.">
-  <meta name="twitter:image" content="assets/img/og-cover.png">
+  <meta name="twitter:image" content="https://mochi-sora.github.io/SoraOfficialWebsite/assets/img/og-cover.png">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/Sora.woff2" as="font" type="font/woff2" crossorigin>
@@ -388,7 +388,7 @@
           </div>
           <div class="flagship-fact">
             <h3>Status</h3>
-            <p>v0.2.2, released against the frozen v1 protocol. Updater artifacts are signed; the macOS and Windows installers are not yet code-signed, so first launch may show a Gatekeeper or SmartScreen warning.</p>
+            <p>v0.2.2, released against the frozen v1 protocol. It requires SoraAgent 0.3.0+ and the matching <code>sora-desktop</code> bridge. Updater artifacts are signed; the macOS and Windows installers are not yet code-signed, so first launch may show a Gatekeeper or SmartScreen warning.</p>
           </div>
         </div>
       </div>
@@ -422,7 +422,7 @@
             </article>
             <article class="feature">
               <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-paperclip"></use></svg></span>
-              <div><h3>Drop in files</h3><p>PDFs, Office documents, ebooks, email, archives, and images become readable text. No special multimodal model required.</p></div>
+              <div><h3>Drop in files</h3><p>PDFs, Office documents, ebooks, email, and archives become readable text without a multimodal model; images use OCR or a vision model when configured.</p></div>
             </article>
             <article class="feature">
               <span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg></span>
@@ -574,7 +574,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
             <dl class="bench-meta">
               <div><dt>Model</dt><dd data-bench="model">DeepSeek V4.1 Flash (deepseek-flash)</dd></div>
               <div><dt>Mode</dt><dd data-bench="mode">live OpenAI-compatible API</dd></div>
-              <div><dt>Scored runs</dt><dd data-bench="runs">62</dd></div>
+              <div><dt>Scored runs</dt><dd data-bench="runs">78</dd></div>
               <div><dt>Run duration</dt><dd data-bench="duration">327.97 s</dd></div>
               <div><dt>Updated</dt><dd><time data-bench="updated" datetime="2026-11-19T09:45:32Z">19 Nov 2026 · 09:45 UTC</time></dd></div>
             </dl>
@@ -774,7 +774,7 @@ pip install -e ".[openai,memory,cli,files,dev]"</code></pre>
               <span class="product-icon"><svg class="icon" aria-hidden="true"><use href="#i-desktop"></use></svg></span>
               <div class="product-body">
                 <div class="product-head"><span class="product-num">02</span><h3>SoraDesk</h3><span class="status-dot live" role="img" aria-label="Live" title="Live"></span></div>
-                <p>The Tauri v2 desktop client — chat, sessions, calendar, memories, and settings.</p>
+                <p>The Tauri v2 desktop client — chat, sessions, specialists, calendar, memories, and settings.</p>
               </div>
               <a class="product-link" href="#soradesk" aria-label="SoraDesk details"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"></use></svg></a>
             </li>
