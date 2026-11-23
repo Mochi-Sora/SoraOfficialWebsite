@@ -11,7 +11,7 @@ So that's why SoraPlatform is created -> To stand opposed to the telemetry and b
 
 **What SoraPlatform will bring**
   1. SoraAgent as the main engine of the entire project -> https://github.com/Mochi-Sora/SoraAgent — **Live** (v0.4.0)
-  2. SoraDesk (Tauri v2) as the main direct connection channel to SoraAgent -> https://github.com/Mochi-Sora/SoraDesk — **Live** (v0.2.2)
+  2. SoraDesk (Tauri v2) as the main direct connection channel to SoraAgent -> https://github.com/Mochi-Sora/SoraDesk — **Live** (v0.2.3)
   3. SoraSkills as the broad term for framework-agnostic skills -> https://www.agensi.io/creators/mochi-sora — **Live** (State First Backend, context handoff)
   4. SoraPlugins as the broad term for SoraAgent dedicated plugins -> WIP
   5. SoraOS as a Linux distro developed on top of the Arch Linux base -> WIP
@@ -25,6 +25,6 @@ So that's why SoraPlatform is created -> To stand opposed to the telemetry and b
 
 SoraAgent v0.4.0 is live: persistent specialists (delegation agents), the document conversion pipeline (PDF, Office, ODF, EPUB, EML, RTF, and archives), the hardened tool pack, session state, and graph-aware long-term memory. Setup now configures all ten chat channels plus the SoraDesk desktop channel.
 
-SoraDesk v0.2.2 is live: the Tauri v2 client, the local `sora_desktop` bridge, and signed-updater packaging are implemented against the frozen v1 protocol. Chat, sessions, Specialists, calendar, memories, attachments, and settings work over local, SSH, or direct-IP connections. It requires SoraAgent 0.3.0+ and the matching bridge. The latest release ships a universal macOS `.dmg`, a Windows NSIS installer, and Linux `.AppImage`, `.deb`, and `.rpm` packages. Updater artifacts are signed; the macOS and Windows installers are not yet code-signed. A post-0.2.2 interface polish pass is on `main`: long session and profile names truncate cleanly at the 900 px minimum width, approval cards stay scoped to the active turn, and the Memories card grid stays balanced. It will ship in the next patch.
+SoraDesk v0.2.3 is live: the Tauri v2 client, the local `sora_desktop` bridge, and signed-updater packaging are implemented against the frozen v1 protocol. Chat, sessions, Specialists, calendar, memories, attachments, and settings work over local, SSH, or direct-IP connections. It requires SoraAgent 0.3.0+ and the matching bridge. The latest release ships a universal macOS `.dmg`, a Windows NSIS installer, and Linux `.AppImage`, `.deb`, and `.rpm` packages. Updater artifacts are signed; the macOS and Windows installers are not yet code-signed. It also ships an interface polish pass: long session and profile names truncate cleanly at the 900 px minimum width, approval cards stay scoped to the active turn, and the Memories card grid stays balanced.
 
 SoraSkills is live on Agensi with two framework-agnostic skills: **State First Backend** (durable working state and curated knowledge for long-running agents) and **context handoff** (compact, structured handoffs that preserve task context across sessions).
