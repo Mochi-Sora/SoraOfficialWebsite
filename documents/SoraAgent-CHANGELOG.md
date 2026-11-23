@@ -2,6 +2,10 @@
 
 All notable changes to SoraAgent are documented here.
 
+Versions before 0.2.0 were development builds: they were not tagged or published
+as GitHub releases, so the 0.1.x entries below are history rather than
+installable tags.
+
 ## [0.4.0] - 2026-11-19
 
 ### Added

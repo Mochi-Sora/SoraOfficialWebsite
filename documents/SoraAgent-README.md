@@ -31,7 +31,7 @@
 - a model/tool loop with human approval, lazy tool discovery, and a non-executional quality gate;
 - a long-running personal agent with `USER.md` / `SOUL.md` identity, session state, daily memory, and CortexDB-backed long-term memory;
 - reachable from ten chat protocols or the [SoraDesk](https://github.com/Mochi-Sora/SoraDesk) desktop app;
-- standard-library-only at its core, with optional `openai`, `zstandard`, `cli`, `files`, `http`, and `scientific` extras.
+- standard-library-only at its core, with optional `openai`, `memory`, `cli`, `files`, `http`, and `scientific` extras.
 
 **It is not**
 
@@ -1475,11 +1475,11 @@ transports keep the completed-reply behavior.
 | Slack | Socket Mode | Web API | Assistant status, then a temporary placeholder message | Bot token + app token (`connections:write`) |
 | WhatsApp | Cloud API webhook | Graph API | Read receipt with `typing_indicator` | Phone number id, permanent token, verify token, app secret |
 | Microsoft Teams | Bot Framework webhook | Bot Framework REST | `typing` activity | Azure Bot app id + client secret |
-| Signal | `signal-cli` SSE | `signal-cli` JSON-RPC | `sendTyping` | Running `signal-cli daemon --http` |
+| Signal | `signal-cli` SSE | `signal-cli` JSON-RPC | `sendTyping` | Running `signal-cli daemon --http` plus an account (`SORA_SIGNAL_ACCOUNT`, E.164) |
 | Google Chat | Signed HTTP events | Incoming webhook | Immediate webhook acknowledgement | App project number + space webhook URL |
 | Matrix | Client-Server `/sync` | Client-Server API | `m.typing` | Homeserver URL + access token (unencrypted rooms) |
 | Feishu / Lark | Event v2 webhook | Open API | `OnIt` reaction, removed after the reply | App id, secret, verification token |
-| iMessage | BlueBubbles webhook | BlueBubbles REST | Typing endpoint | BlueBubbles server URL + password |
+| iMessage | BlueBubbles webhook | BlueBubbles REST | Typing endpoint | BlueBubbles server URL + password + webhook secret (`SORA_IMESSAGE_WEBHOOK_SECRET`; set `SORA_IMESSAGE_ALLOW_UNVERIFIED=1` to opt out) |
 
 All channels enforce the same `allow_from` rule: `"*"` allows everyone and an
 empty list denies everyone. A token alone is never an access policy.
@@ -1517,8 +1517,9 @@ platform-sized chunks that prefer natural breaks.
 - **Approvals**: approval prompts get Approve/Reject inline buttons
   (`approval:<yes|no>:<id>`); prompts stay inside their forum topic. A button
   press is acknowledged only after the broker consumes it; stale buttons say
-  the approval is no longer active and keep their keyboard. Replies by text
-  (`yes` / `no`) work too, but only from the sender who triggered the turn.
+  the approval is no longer active and keep their keyboard. Replies by text must
+  be `approve` or `reject` (or their listed inflections); `yes` / `no` and other
+  ambiguous replies are forwarded to the agent as ordinary messages.
 - **Topics**: a `message_thread_id` scopes the session to
   `telegram:<chat>:<thread>`.
 - **Config**: `SORA_TELEGRAM_TOKEN` (required), `SORA_TELEGRAM_ALLOW_FROM`
@@ -1947,7 +1948,7 @@ SoraAgent/
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[openai,memory,cli,files,dev]"
 
-pytest                          # 884 tests
+pytest                          # 888 tests
 pyright                         # static checks, standard mode (Python 3.9; install separately)
 ```
 
