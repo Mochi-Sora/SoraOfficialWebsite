@@ -30,7 +30,7 @@ The site is deliberately **static**: plain HTML, CSS, and JavaScript with no bui
 - **Start here** — four simple ways in: the desktop app, the agent, the OS, or a portable skill.
 - **SoraDesk** — the native desktop client, download buttons, and a product preview.
 - **SoraAgent** — what the engine does, the installer, and links to the README.
-- **SoraOS** — the Arch-based KDE Plasma live image, its M2a status, and links to the source and documentation.
+- **SoraOS** — the Arch-based KDE Plasma live image, its M2b status, and links to the source and documentation.
 - **SoraSkills** — the two live Agensi skills and direct listings.
 - **Benchmarks** — the public SoraAgent scoreboard, loaded from the benchmark repository on page load.
 - **Roadmap** — all ten SoraPlatform products, honestly marked live, built, or in development.
