@@ -14,7 +14,7 @@ So that's why SoraPlatform is created -> To stand opposed to the telemetry and b
   2. SoraDesk (Tauri v2) as the main direct connection channel to SoraAgent -> https://github.com/Mochi-Sora/SoraDesk — **Live** (v0.2.3)
   3. SoraSkills as the broad term for framework-agnostic skills -> https://www.agensi.io/creators/mochi-sora — **Live** (State First Backend, context handoff)
   4. SoraPlugins as the broad term for SoraAgent dedicated plugins -> WIP
-  5. SoraOS as an Arch-based KDE Plasma desktop layer -> https://github.com/Mochi-Sora/SoraOS — **Built** (M1 live image, validated in QEMU)
+  5. SoraOS as an Arch-based KDE Plasma desktop layer -> https://github.com/Mochi-Sora/SoraOS — **Built** (M2a signed package layer; live image validated in QEMU)
   6. SoraOffice as a direct candidate for office work -> WIP
   7. SoraCreate as a direct candidate for creative work -> WIP
   8. SoraBrowser as a direct candidate for browsing work -> WIP
@@ -29,4 +29,4 @@ SoraDesk v0.2.3 is live: the Tauri v2 client, the local `sora_desktop` bridge, a
 
 SoraSkills is live on Agensi with two framework-agnostic skills: **State First Backend** (durable working state and curated knowledge for long-running agents) and **context handoff** (compact, structured handoffs that preserve task context across sessions).
 
-SoraOS M1 is built: an archiso 92 profile on `linux-lts` with KDE Plasma 6, Plasma Login Manager autologin, the SoraOS look-and-feel and color scheme, BIOS and UEFI boot, and a speech/accessibility entry. The live image passes the UEFI/BIOS boot matrix and the live-session checklist in QEMU; real-hardware validation is next. It is not yet an installable release: M2 adds the signed `[soraos]` repository and keyring, and M3 adds the Calamares installer.
+SoraOS M2a is built: an archiso 92 profile on `linux-lts` with KDE Plasma 6, Plasma Login Manager autologin, the SoraOS look-and-feel and color scheme, BIOS and UEFI boot, and a speech/accessibility entry. M2a adds five `soraos-*` packages served from a signed local `[soraos]` repository with its own keyring. The live image passes the UEFI/BIOS boot matrix and the live-session checklist in QEMU; real-hardware validation is next. It is not yet an installable release: M2b adds SoraAgent/SoraDesk packages and a hosted signed mirror, and M3 adds the Calamares installer.
