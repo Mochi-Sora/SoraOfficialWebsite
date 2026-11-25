@@ -17,21 +17,23 @@
   <a href="https://github.com/Mochi-Sora">GitHub</a> ·
   <a href="https://www.agensi.io/creators/mochi-sora">Agensi</a> ·
   <a href="https://github.com/Mochi-Sora/SoraAgent">SoraAgent</a> ·
-  <a href="https://github.com/Mochi-Sora/SoraDesk">SoraDesk</a>
+  <a href="https://github.com/Mochi-Sora/SoraDesk">SoraDesk</a> ·
+  <a href="https://github.com/Mochi-Sora/SoraOS">SoraOS</a>
 </p>
 
-This is the official website of **Tam Kuan Hou** (譚君浩 / Marco Tam), known online as **Mochi-Sora** — an independent software developer and the creator of **SoraPlatform**. It is also the public front door for SoraAgent, SoraDesk, SoraSkills, the product roadmap, and the live benchmark.
+This is the official website of **Tam Kuan Hou** (譚君浩 / Marco Tam), known online as **Mochi-Sora** — an independent software developer and the creator of **SoraPlatform**. It is also the public front door for SoraAgent, SoraDesk, SoraOS, SoraSkills, the product roadmap, and the live benchmark.
 
 The site is deliberately **static**: plain HTML, CSS, and JavaScript with no build step, no framework, and no analytics. It can be served from GitHub Pages or any static host.
 
 ## What is on the site
 
-- **Start here** — three simple ways in: the desktop app, the agent, or a portable skill.
+- **Start here** — four simple ways in: the desktop app, the agent, the OS, or a portable skill.
 - **SoraDesk** — the native desktop client, download buttons, and a product preview.
 - **SoraAgent** — what the engine does, the installer, and links to the README.
+- **SoraOS** — the Arch-based KDE Plasma live image, its M1 status, and links to the source and documentation.
 - **SoraSkills** — the two live Agensi skills and direct listings.
 - **Benchmarks** — the public SoraAgent scoreboard, loaded from the benchmark repository on page load.
-- **Roadmap** — all ten SoraPlatform products, honestly marked live or in development.
+- **Roadmap** — all ten SoraPlatform products, honestly marked live, built, or in development.
 - **In development**, **Purpose**, and **Contact** — what is next, why it exists, and where to find the community.
 
 ## Start here
@@ -83,7 +85,7 @@ SoraOfficialWebsite/
 │   ├── js/main.js             # navigation, tabs, copy, reveal
 │   ├── js/scoreboard.js       # fetches and renders the live benchmark data
 │   ├── fonts/                 # self-hosted Sora, Inter, Instrument Serif
-│   └── img/                   # avatar, favicon, social preview
+│   └── img/                   # avatar, favicon, social preview, SoraOS screenshot
 ├── documents/                 # mirrors of official product documents
 └── README.md
 ```
@@ -101,4 +103,4 @@ To update it, publish a new `SoraAgent-live-scoreboard.md` in [SoraAgent-Benchma
 - Local documents under [`documents/`](documents/) are convenience mirrors. The GitHub repository versions are canonical.
 - Fonts are self-hosted under `assets/fonts/`; Sora, Inter, and Instrument Serif are licensed under the SIL Open Font License.
 - The social preview image is `assets/img/og-cover.png` (1200 × 630). `og:image` and `twitter:image` use absolute URLs so previews work reliably after deployment.
-- SoraAgent and SoraDesk are licensed **AGPL-3.0-only**. The SoraAgent benchmark harness is **MIT-licensed**. Website copy and branding are © 2026 Tam Kuan Hou (譚君浩 / Marco Tam).
+- SoraAgent, SoraDesk, and SoraOS are licensed **AGPL-3.0-only**. The SoraAgent benchmark harness is **MIT-licensed**. Website copy and branding are © 2026 Tam Kuan Hou (譚君浩 / Marco Tam).

@@ -1971,6 +1971,8 @@ Notes for contributors:
 SoraAgent is the engine of [SoraPlatform](https://github.com/Mochi-Sora), an umbrella of
 open-source, independent products built against telemetry and bloat. It powers
 [SoraDesk](https://github.com/Mochi-Sora/SoraDesk), the desktop client;
+[SoraOS](https://github.com/Mochi-Sora/SoraOS) is the Arch-based KDE Plasma desktop
+layer, with an M1 live image built and QEMU-validated;
 [SoraSkills](https://www.agensi.io/creators/mochi-sora) packages framework-agnostic
 agent skills on Agensi; and the rest of the ten-product roadmap is in development. The
 official site lives at
